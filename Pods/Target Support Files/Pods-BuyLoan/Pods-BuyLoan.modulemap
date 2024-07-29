@@ -1,6 +1,0 @@
-framework module Pods_BuyLoan {
-  umbrella header "Pods-BuyLoan-umbrella.h"
-
-  export *
-  module * { export * }
-}
