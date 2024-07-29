@@ -12,11 +12,22 @@ class BBLaunchView: BBCommonView {
     var block1: (() -> Void)?
     
     var block2: (() -> Void)?
+    
+    lazy var yellowView: UIView = {
+        let yellowView = UIView()
+        yellowView.backgroundColor = UIColor.init(hex: "#FBDD01")
+        return yellowView
+    }()
+    
+    lazy var welLabel: UILabel = {
+        let welLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 40)!, textColor: UIColor.init(hex: "#2C2C36"), textAlignment: .left)
+        welLabel.text = "Welcome to"
+        return welLabel
+    }()
 
     lazy var descLabel: UILabel = {
-        let descLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 40)!, textColor: UIColor.init(hex: "#2C2C36"), textAlignment: .left)
-        descLabel.text = "Welcome to\nCredit Loan!"
-        descLabel.numberOfLines = 0
+        let descLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 40)!, textColor: UIColor.init(hex: "#007CFB"), textAlignment: .left)
+        descLabel.text = "Credit Loan!"
         return descLabel
     }()
     
@@ -59,15 +70,29 @@ class BBLaunchView: BBCommonView {
         super.init(frame: frame)
         backBtn.isHidden = true
         whiteView.isHidden = true
+        scrollView.addSubview(yellowView)
+        scrollView.addSubview(welLabel)
         scrollView.addSubview(descLabel)
         scrollView.addSubview(descLabel1)
         scrollView.addSubview(bgImageView)
         scrollView.addSubview(startBtn)
         scrollView.addSubview(notBtn)
+        yellowView.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(30)
+            make.top.equalToSuperview().offset(195.5)
+            make.size.equalTo(CGSize(width: 253, height: 12))
+        }
+        welLabel.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(30)
+            make.bottom.equalTo(yellowView.snp.top).offset(12)
+            make.width.equalTo(312)
+            make.height.equalTo(41.5)
+        }
         descLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(30)
-            make.top.equalToSuperview().offset(160)
-            make.size.equalTo(CGSize(width: 312, height: 108))
+            make.top.equalTo(welLabel.snp.bottom).offset(10)
+            make.width.equalTo(312)
+            make.height.equalTo(41.5)
         }
         descLabel1.snp.makeConstraints { make in
             make.left.equalTo(descLabel.snp.left)

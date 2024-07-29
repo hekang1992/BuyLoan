@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow()
         window?.frame = UIScreen.main.bounds
-        window?.rootViewController = BaseNavController(rootViewController: launchVc)
+        window?.rootViewController = CLTabBarViewController()
         window?.makeKeyAndVisible()
         return true
     }

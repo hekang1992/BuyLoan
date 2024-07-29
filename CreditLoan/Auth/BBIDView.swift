@@ -33,8 +33,8 @@ class BBIDView: BBCommonView {
         let bannerView = GKCycleScrollView()
         bannerView.delegate = self
         bannerView.dataSource = self
+        bannerView.autoScrollTime = 2.0
         bannerView.layer.cornerRadius = 20
-        bannerView.minimumCellAlpha = 0.0;
         bannerView.pageControl = pageCon
         bannerView.reloadData()
         return bannerView
@@ -168,7 +168,7 @@ class BBIDView: BBCommonView {
         }
         pageCon.snp.makeConstraints { make in
             make.right.equalToSuperview().offset(-15)
-            make.top.equalToSuperview().offset(15)
+            make.top.equalToSuperview().offset(10)
             make.size.equalTo(CGSize(width: 60, height: 4))
         }
         leftView.snp.makeConstraints { make in

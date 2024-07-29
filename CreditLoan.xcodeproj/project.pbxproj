@@ -22,6 +22,12 @@
 		18C426EB2C4A569D00A735A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C426EA2C4A569D00A735A6 /* AppDelegate.swift */; };
 		18C426F42C4A569E00A735A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C426F32C4A569E00A735A6 /* Assets.xcassets */; };
 		18C426F72C4A569E00A735A6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 18C426F62C4A569E00A735A6 /* Base */; };
+		18EAAAD62C576AE1000C4895 /* BillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAD52C576AE1000C4895 /* BillsViewController.swift */; };
+		18EAAADA2C576B11000C4895 /* GeRenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAD92C576B11000C4895 /* GeRenViewController.swift */; };
+		18EAAADC2C576B4B000C4895 /* CLTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAADB2C576B4B000C4895 /* CLTabBarViewController.swift */; };
+		18EAAADE2C576F6F000C4895 /* CLNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAADD2C576F6F000C4895 /* CLNavigationViewController.swift */; };
+		18EAAAE02C57741F000C4895 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAADF2C57741F000C4895 /* LoginViewController.swift */; };
+		18EAAAE22C5774E2000C4895 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAE12C5774E2000C4895 /* BaseModel.swift */; };
 		44DD527AF83C6863218A93E2 /* Pods_CreditLoan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92A86CF3B5079EB3713561 /* Pods_CreditLoan.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +49,12 @@
 		18C426F32C4A569E00A735A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18C426F62C4A569E00A735A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18C426F82C4A569E00A735A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18EAAAD52C576AE1000C4895 /* BillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsViewController.swift; sourceTree = "<group>"; };
+		18EAAAD92C576B11000C4895 /* GeRenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeRenViewController.swift; sourceTree = "<group>"; };
+		18EAAADB2C576B4B000C4895 /* CLTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLTabBarViewController.swift; sourceTree = "<group>"; };
+		18EAAADD2C576F6F000C4895 /* CLNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLNavigationViewController.swift; sourceTree = "<group>"; };
+		18EAAADF2C57741F000C4895 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		18EAAAE12C5774E2000C4895 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		3013B547659B6C3D81055188 /* Pods-CreditLoan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditLoan.debug.xcconfig"; path = "Target Support Files/Pods-CreditLoan/Pods-CreditLoan.debug.xcconfig"; sourceTree = "<group>"; };
 		7B92A86CF3B5079EB3713561 /* Pods_CreditLoan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreditLoan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FE9930486DD2219D156F0F /* Pods-CreditLoan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditLoan.release.xcconfig"; path = "Target Support Files/Pods-CreditLoan/Pods-CreditLoan.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,35 +72,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1810D8CD2C4A6BEF00DA90B7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1810D8D02C4A6C3200DA90B7 /* BBCommonView.swift */,
-				1810D8D22C4A6D2B00DA90B7 /* BBLaunchView.swift */,
-				1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */,
-				1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		1810D8CF2C4A6C0A00DA90B7 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				1810D8C72C4A5E1600DA90B7 /* HomeViewController.swift */,
-				1810D8C52C4A5DBE00DA90B7 /* BaseViewController.swift */,
-				1810D8C92C4A5E2700DA90B7 /* LaunchViewController.swift */,
-				1810D8D92C4E2B5A00DA90B7 /* BBIDViewController.swift */,
-				1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		1810D8D42C4A6F6F00DA90B7 /* BBConfig */ = {
 			isa = PBXGroup;
 			children = (
 				1810D8D52C4A6F8B00DA90B7 /* Mont-Heavy.ttf */,
 				1810D8D62C4A6F8B00DA90B7 /* Mont-Regular.ttf */,
 				1810D8CB2C4A6B5800DA90B7 /* BBConfig.swift */,
+				18EAAAE12C5774E2000C4895 /* BaseModel.swift */,
 			);
 			path = BBConfig;
 			sourceTree = "<group>";
@@ -115,14 +105,82 @@
 			isa = PBXGroup;
 			children = (
 				18C426F82C4A569E00A735A6 /* Info.plist */,
+				18EAAAE32C57758C000C4895 /* Main */,
+				18EAAAE92C5775E2000C4895 /* Auth */,
+				18EAAAE82C5775D3000C4895 /* Profile */,
+				18EAAAE72C5775CC000C4895 /* Bills */,
+				18EAAAE62C5775C7000C4895 /* Home */,
+				18EAAAE52C57759C000C4895 /* Login */,
+				18EAAAE42C577599000C4895 /* BaseVc */,
+				1810D8D42C4A6F6F00DA90B7 /* BBConfig */,
+			);
+			path = CreditLoan;
+			sourceTree = "<group>";
+		};
+		18EAAAE32C57758C000C4895 /* Main */ = {
+			isa = PBXGroup;
+			children = (
 				18C426EA2C4A569D00A735A6 /* AppDelegate.swift */,
 				18C426F32C4A569E00A735A6 /* Assets.xcassets */,
 				18C426F52C4A569E00A735A6 /* LaunchScreen.storyboard */,
-				1810D8D42C4A6F6F00DA90B7 /* BBConfig */,
-				1810D8CD2C4A6BEF00DA90B7 /* View */,
-				1810D8CF2C4A6C0A00DA90B7 /* Controller */,
 			);
-			path = CreditLoan;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		18EAAAE42C577599000C4895 /* BaseVc */ = {
+			isa = PBXGroup;
+			children = (
+				1810D8D02C4A6C3200DA90B7 /* BBCommonView.swift */,
+				1810D8D22C4A6D2B00DA90B7 /* BBLaunchView.swift */,
+				1810D8C92C4A5E2700DA90B7 /* LaunchViewController.swift */,
+				1810D8C52C4A5DBE00DA90B7 /* BaseViewController.swift */,
+				1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */,
+				18EAAADB2C576B4B000C4895 /* CLTabBarViewController.swift */,
+				18EAAADD2C576F6F000C4895 /* CLNavigationViewController.swift */,
+			);
+			path = BaseVc;
+			sourceTree = "<group>";
+		};
+		18EAAAE52C57759C000C4895 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				18EAAADF2C57741F000C4895 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		18EAAAE62C5775C7000C4895 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1810D8C72C4A5E1600DA90B7 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		18EAAAE72C5775CC000C4895 /* Bills */ = {
+			isa = PBXGroup;
+			children = (
+				18EAAAD52C576AE1000C4895 /* BillsViewController.swift */,
+			);
+			path = Bills;
+			sourceTree = "<group>";
+		};
+		18EAAAE82C5775D3000C4895 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				18EAAAD92C576B11000C4895 /* GeRenViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		18EAAAE92C5775E2000C4895 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */,
+				1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */,
+				1810D8D92C4E2B5A00DA90B7 /* BBIDViewController.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		B876A589A14FCA2403DE8E7C /* Pods */ = {
@@ -267,7 +325,13 @@
 				1810D8D12C4A6C3200DA90B7 /* BBCommonView.swift in Sources */,
 				1810D8E02C4E48E600DA90B7 /* BaseNavController.swift in Sources */,
 				1810D8D32C4A6D2B00DA90B7 /* BBLaunchView.swift in Sources */,
+				18EAAAD62C576AE1000C4895 /* BillsViewController.swift in Sources */,
 				1810D8C82C4A5E1600DA90B7 /* HomeViewController.swift in Sources */,
+				18EAAAE22C5774E2000C4895 /* BaseModel.swift in Sources */,
+				18EAAADC2C576B4B000C4895 /* CLTabBarViewController.swift in Sources */,
+				18EAAAE02C57741F000C4895 /* LoginViewController.swift in Sources */,
+				18EAAADE2C576F6F000C4895 /* CLNavigationViewController.swift in Sources */,
+				18EAAADA2C576B11000C4895 /* GeRenViewController.swift in Sources */,
 				1810D8CA2C4A5E2700DA90B7 /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
