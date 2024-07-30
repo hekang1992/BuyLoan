@@ -14,16 +14,14 @@
 @implementation MBProgressHUD (WJExtension)
 
 #pragma mark 显示一些信息
-/**
- 只显示文字
- */
+
 + (void)wj_showText:(NSString *)text view:(nullable UIView *)view
 {
     [self wj_showPlainText:text hideAfterDelay:1.0 view:view];
 }
 
 + (void)wj_showPlainText:(NSString *)text view:(nullable UIView *)view{
-    [self wj_showPlainText:text hideAfterDelay:1.0 view:view];
+    [self wj_showPlainText:text hideAfterDelay:0.8 view:view];
 }
 
 + (void)wj_showPlainText:(NSString *)text
@@ -31,20 +29,14 @@
                     view:(nullable UIView *)view {
     
     if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
-    // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.detailsLabelText = text;
+    hud.detailsLabelColor = UIColor.whiteColor;
+    hud.detailsLabelFont = [UIFont fontWithName:@"Mont-Heavy" size:15];
     hud.mode = MBProgressHUDModeText;
-    hud.labelText = text;
-    
-    // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
-    
-    // 1秒之后再消失
     [hud hide:YES afterDelay:time];
-    
 }
-
-
 
 #pragma mark 显示带有自定义icon图片的消息
 

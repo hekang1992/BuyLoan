@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MBProgressHUD_WJExtension
 
 typealias sendCodeBlock = ((UIButton) -> Void)
 class LoginView: BBCommonView {
@@ -235,7 +236,11 @@ extension LoginView {
             }).disposed(by: disposeBag)
         sendCodeBtn.rx.tap.subscribe(onNext: { [weak self] in
             if let self = self {
-                self.block?(self.sendCodeBtn)
+                if self.phoneTx.text?.count != 0 {
+                    self.block?(self.sendCodeBtn)
+                }else {
+                    MBProgressHUD.wj_showPlainText("Please enter your phone number", view: nil)
+                }
             }
         }).disposed(by: disposeBag)
         sureBtn.rx.tap.subscribe(onNext: { [weak self] in

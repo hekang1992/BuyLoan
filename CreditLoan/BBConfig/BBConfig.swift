@@ -97,7 +97,7 @@ class loadingView: UIView {
     
     lazy var grayView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.25)
         return view
     }()
     
@@ -126,7 +126,7 @@ class loadingView: UIView {
         }
         hudView.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.size.equalTo(CGSize(width: 150.alpix(), height: 250.alpix()))
+            make.size.equalTo(CGSize(width: 120.alpix(), height: 200.alpix()))
         }
     }
 }
