@@ -7,10 +7,19 @@
 
 import UIKit
 import AdSupport
-import AppTrackingTransparency
 import SAMKeychain
-import SystemConfiguration
 import DeviceKit
+import SystemConfiguration
+import AppTrackingTransparency
+
+var IS_LOGIN: Bool {
+    let us = UserDefaults.standard
+    if let session = us.object(forKey: CL_SESSIONID) as? String {
+        return !session.isEmpty
+    } else {
+        return false
+    }
+}
 
 class LoginConfig: NSObject {
 
@@ -22,62 +31,62 @@ class LoginConfig: NSObject {
     }
 
     static func getaras() -> [String: String]{
-//        let overturned: String = UIDevice.current.systemVersion
-//        var baffled: String = ""
-//        if let sessionId: String = UserDefaults.standard.object(forKey: SESSIONID) as? String {
-//            baffled = sessionId
-//        }
-//        let walkflat: String = "siccs"
-//        let period: String = PADeviceInfo.getIDFV() ?? ""
-//        let basket = PADeviceInfo.usingProxy()
-//        let nullified: String = "iOS"
-//        let change: String = "pc"
-//        let peach = PADeviceInfo.vpnConnected()
-//        let seehow: String = getAppVersion()
-//        let egyptians: String = Device.current.description
-//        let declared: String = PADeviceInfo.getIDFV() ?? ""
-//        let total = "14"
-//        let monthly = "8"
-//        let amount = "13"
-//        
-//        let dict1 = ["nullified": nullified,
-//                    "seehow": seehow,
-//                    "egyptians": egyptians,
-//                    "declared": declared,
-//                     "total": total,
-//                     "monthly": monthly,
-//                     "amount": amount]
-//        
-//        let dict2 = ["overturned": overturned,
-//                     "walkflat": walkflat,
-//                     "baffled": baffled,
-//                     "period": period,
-//                     "change": change,
-//                     "peach": peach,
-//                     "basket": basket]
-//        
-//        let allDict = dict2.reduce(into: dict1) { (result, item) in
-//            result[item.key] = item.value
-//        }
-//        return allDict
+        let overturned: String = UIDevice.current.systemVersion
+        var baffled: String = ""
+        if let sessionId: String = UserDefaults.standard.object(forKey: CL_SESSIONID) as? String {
+            baffled = sessionId
+        }
+        let walkflat: String = "siccs"
+        let period: String = CLDeviceInfo.getIDFV() ?? ""
+        let basket = CLDeviceInfo.usingProxy()
+        let nullified: String = "iOS"
+        let change: String = "pc"
+        let peach = CLDeviceInfo.vpnConnected()
+        let seehow: String = getAppVersion()
+        let egyptians: String = Device.current.description
+        let declared: String = CLDeviceInfo.getIDFV() ?? ""
+        let total = "14"
+        let monthly = "8"
+        let amount = "13"
+        
+        let dict1 = ["nullified": nullified,
+                    "seehow": seehow,
+                    "egyptians": egyptians,
+                    "declared": declared,
+                     "total": total,
+                     "monthly": monthly,
+                     "amount": amount]
+        
+        let dict2 = ["overturned": overturned,
+                     "walkflat": walkflat,
+                     "baffled": baffled,
+                     "period": period,
+                     "change": change,
+                     "peach": peach,
+                     "basket": basket]
+        
+        let allDict = dict2.reduce(into: dict1) { (result, item) in
+            result[item.key] = item.value
+        }
+        return allDict
     }
     
     static func saveLoginInfo(_ phone: String, _ sessionID: String) {
-        UserDefaults.standard.setValue(phone, forKey: LOGIN)
-        UserDefaults.standard.setValue(sessionID, forKey: SESSIONID)
+        UserDefaults.standard.setValue(phone, forKey: CL_LOGIN)
+        UserDefaults.standard.setValue(sessionID, forKey: CL_SESSIONID)
         UserDefaults.standard.synchronize()
     }
     
     static func removeLoginInfo() {
-        UserDefaults.standard.setValue("", forKey: LOGIN)
-        UserDefaults.standard.setValue("", forKey: SESSIONID)
+        UserDefaults.standard.setValue("", forKey: CL_LOGIN)
+        UserDefaults.standard.setValue("", forKey: CL_SESSIONID)
         UserDefaults.standard.synchronize()
     }
     
 }
 
 
-class PADeviceInfo {
+class CLDeviceInfo {
     
     static func requestIDFA(completion: @escaping (String?) -> Void) {
         if #available(iOS 14, *) {

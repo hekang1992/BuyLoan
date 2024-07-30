@@ -13,9 +13,9 @@ let Heavy_Mont = "Mont-Heavy"
 
 let Regular_Mont = "Mont-Regular"
 
-let SESSIONID = "SESSIONID"
+let CL_SESSIONID = "SESSIONID"
 
-let LOGIN = "LOGIN"
+let CL_LOGIN = "LOGIN"
 
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 
