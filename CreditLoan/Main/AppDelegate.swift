@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,10 +22,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow()
         window?.frame = UIScreen.main.bounds
-        window?.rootViewController = CLTabBarViewController()
+        window?.rootViewController = LoginViewController()
+        kkanager()
         window?.makeKeyAndVisible()
         return true
     }
 
 }
 
+
+extension AppDelegate {
+    
+    func kkanager(){
+        let manager = IQKeyboardManager.shared
+        manager.keyboardDistanceFromTextField = 5.alpix()
+        manager.shouldResignOnTouchOutside = true
+        manager.enable = true
+    }
+    
+}

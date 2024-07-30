@@ -15,11 +15,11 @@ class BBIDView: BBCommonView {
     let titleArray: [String] = ["All information on the ID must be legible!","All information on the ID must be legible!","All information on the ID must be legible!"]
     
     lazy var descLabel: PaddedLabel = {
-        let descLabel = PaddedLabel.chuangjianLabel(font: UIFont(name: Regular_Mont, size: 12)!, textColor: UIColor.init(hex: "#007CFB"), textAlignment: .left)
+        let descLabel = PaddedLabel.chuangjianLabel(font: UIFont(name: Regular_Mont, size: 12.alpix())!, textColor: UIColor.init(hex: "#007CFB"), textAlignment: .left)
         descLabel.numberOfLines = 0
         descLabel.text = "Your personal information will only be used for loan verification, and the system will ensure the security of your privacy."
         descLabel.backgroundColor = UIColor.init(hex: "#F2F6FF")
-        descLabel.textInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
+        descLabel.textInsets = UIEdgeInsets(top: 0, left: 30.alpix(), bottom: 0, right: 0)
         return descLabel
     }()
     
@@ -34,7 +34,7 @@ class BBIDView: BBCommonView {
         bannerView.delegate = self
         bannerView.dataSource = self
         bannerView.autoScrollTime = 2.0
-        bannerView.layer.cornerRadius = 20
+        bannerView.layer.cornerRadius = 20.alpix()
         bannerView.pageControl = pageCon
         bannerView.reloadData()
         return bannerView
@@ -52,7 +52,7 @@ class BBIDView: BBCommonView {
     lazy var leftView: UIView = {
         let leftView = UIView()
         leftView.backgroundColor = UIColor.init(hex: "#F2F3F5")
-        leftView.layer.cornerRadius = 3
+        leftView.layer.cornerRadius = 3.alpix()
         return leftView
     }()
     
@@ -69,7 +69,7 @@ class BBIDView: BBCommonView {
     }()
     
     lazy var titleLabel: UILabel = {
-        let titleLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 16)!, textColor: UIColor.init(hex: "#B8C0C9"), textAlignment: .center)
+        let titleLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 16.alpix())!, textColor: UIColor.init(hex: "#B8C0C9"), textAlignment: .center)
         titleLabel.numberOfLines = 0
         titleLabel.text = "Identity Verification"
         return titleLabel
@@ -78,7 +78,7 @@ class BBIDView: BBCommonView {
     lazy var rightView: UIView = {
         let rightView = UIView()
         rightView.backgroundColor = UIColor.init(hex: "#F2F3F5")
-        rightView.layer.cornerRadius = 3
+        rightView.layer.cornerRadius = 3.alpix()
         return rightView
     }()
     
@@ -95,7 +95,7 @@ class BBIDView: BBCommonView {
     }()
     
     lazy var titleLabel1: UILabel = {
-        let titleLabel1 = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 16)!, textColor: UIColor.init(hex: "#B8C0C9"), textAlignment: .center)
+        let titleLabel1 = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 16.alpix())!, textColor: UIColor.init(hex: "#B8C0C9"), textAlignment: .center)
         titleLabel1.numberOfLines = 0
         titleLabel1.text = "Face Recognition"
         return titleLabel1
@@ -108,7 +108,7 @@ class BBIDView: BBCommonView {
     }()
     
     lazy var umidLabel: UILabel = {
-        let umidLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 16)!, textColor: UIColor.init(hex: "#B8C0C9"), textAlignment: .left)
+        let umidLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 16.alpix())!, textColor: UIColor.init(hex: "#B8C0C9"), textAlignment: .left)
         umidLabel.text = "UMID"
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(umidLabelClick))
         umidLabel.addGestureRecognizer(tapGesture)
@@ -126,7 +126,7 @@ class BBIDView: BBCommonView {
         let startBtn = UIButton(type: .custom)
         startBtn.layer.cornerRadius = 3
         startBtn.setTitle("Start", for: .normal)
-        startBtn.titleLabel?.font = UIFont(name: Heavy_Mont, size: 18)
+        startBtn.titleLabel?.font = UIFont(name: Heavy_Mont, size: 18.alpix())
         startBtn.setTitleColor(UIColor.init(hex: "#FFFFFF"), for: .normal)
         startBtn.backgroundColor = UIColor.init(hex: "#007CFB")
         return startBtn
@@ -288,7 +288,7 @@ class zhengqueCell: GKCycleScrollViewCell {
     }()
     
     lazy var descLabel: UILabel = {
-        let descLabel = UILabel.chuangjianLabel(font: UIFont(name: Regular_Mont, size: 16)!, textColor: UIColor.init(hex: "#007CFB"), textAlignment: .center)
+        let descLabel = UILabel.chuangjianLabel(font: UIFont(name: Regular_Mont, size: 16.alpix())!, textColor: UIColor.init(hex: "#007CFB"), textAlignment: .center)
         descLabel.numberOfLines = 0
         descLabel.text = "All information on the ID must be legible!"
         return descLabel

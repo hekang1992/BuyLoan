@@ -7,10 +7,16 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class BBCommonView: UIView {
     
     var backBlock: (() -> Void)?
+    
+    lazy var disposeBag = {
+        return DisposeBag()
+    }()
 
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -35,8 +41,8 @@ class BBCommonView: UIView {
         return backBtn
     }()
     
-    lazy var nameLabel: UILabel = {
-        let nameLabel = UILabel.chuangjianLabel(font: UIFont(name: Regular_Mont, size: 18)!, textColor: UIColor.init(hex: "#2C2C36"), textAlignment: .center)
+    lazy var nameLabel: PaddedLabel = {
+        let nameLabel = PaddedLabel.chuangjianLabel(font: UIFont(name: Regular_Mont, size: 18.alpix())!, textColor: UIColor.init(hex: "#2C2C36"), textAlignment: .center)
         return nameLabel
     }()
     
@@ -51,18 +57,17 @@ class BBCommonView: UIView {
         }
         whiteView.snp.makeConstraints { make in
             make.left.top.right.equalToSuperview()
-            make.height.equalTo(88)
+            make.height.equalTo(88.alpix())
         }
         nameLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-10)
-            make.left.equalToSuperview().offset(20)
-            make.height.equalTo(24)
-            make.width.equalTo(220)
+            make.bottom.equalToSuperview().offset(-10.alpix())
+            make.left.equalToSuperview().offset(20.alpix())
+            make.height.equalTo(24.alpix())
         }
         backBtn.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: 22, height: 22))
-            make.left.equalToSuperview().offset(20)
+            make.size.equalTo(CGSize(width: 22.alpix(), height: 22.alpix()))
+            make.left.equalToSuperview().offset(20.alpix())
             make.centerY.equalTo(nameLabel.snp.centerY)
         }
     }

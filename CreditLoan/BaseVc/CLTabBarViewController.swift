@@ -46,8 +46,8 @@ extension CLTabBarViewController {
         
         self.viewControllers = controllers
         
-        let anormal = [NSAttributedString.Key.font: UIFont(name: Heavy_Mont, size: 14) as Any]
-        let aselected = [NSAttributedString.Key.font: UIFont(name: Heavy_Mont, size: 14) as Any]
+        let anormal = [NSAttributedString.Key.font: UIFont(name: Heavy_Mont, size: 14.alpix()) as Any]
+        let aselected = [NSAttributedString.Key.font: UIFont(name: Heavy_Mont, size: 14.alpix()) as Any]
         
         UITabBarItem.appearance().setTitleTextAttributes(anormal, for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes(aselected, for: .selected)

@@ -12,6 +12,30 @@ let Heavy_Mont = "Mont-Heavy"
 
 let Regular_Mont = "Mont-Regular"
 
+let SESSIONID = "SESSIONID"
+
+let SCREEN_WIDTH = UIScreen.main.bounds.size.width
+
+let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
+
+extension Double {
+    func alpix() -> CGFloat {
+        return CGFloat.init(CGFloat.init(self)/375.0 * SCREEN_WIDTH)
+    }
+}
+
+extension CGFloat {
+    func alpix() -> CGFloat {
+        return CGFloat.init(CGFloat.init(self)/375.0 * SCREEN_WIDTH)
+    }
+}
+
+extension Int {
+    func alpix() -> CGFloat {
+        return CGFloat.init(CGFloat.init(self)/375.0 * SCREEN_WIDTH)
+    }
+}
+
 extension UIColor {
     convenience init(hex: String) {
         var hexString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
@@ -47,5 +71,21 @@ extension UILabel {
         label.textAlignment = textAlignment
         label.font = font
         return label
+    }
+}
+
+
+/* .................................................. */
+
+class NoCopyField: UITextField {
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        if action == #selector(copy(_:)) ||
+            action == #selector(paste(_:)) ||
+            action == #selector(cut(_:)) ||
+            action == #selector(select(_:)) ||
+            action == #selector(selectAll(_:)) {
+            return false
+        }
+        return super.canPerformAction(action, withSender: sender)
     }
 }

@@ -28,6 +28,8 @@
 		18EAAADE2C576F6F000C4895 /* CLNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAADD2C576F6F000C4895 /* CLNavigationViewController.swift */; };
 		18EAAAE02C57741F000C4895 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAADF2C57741F000C4895 /* LoginViewController.swift */; };
 		18EAAAE22C5774E2000C4895 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAE12C5774E2000C4895 /* BaseModel.swift */; };
+		18EAAAEE2C577971000C4895 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAED2C577971000C4895 /* LoginView.swift */; };
+		18EAAAF02C58D5B1000C4895 /* ApiUrlConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAEF2C58D5B1000C4895 /* ApiUrlConfig.swift */; };
 		44DD527AF83C6863218A93E2 /* Pods_CreditLoan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92A86CF3B5079EB3713561 /* Pods_CreditLoan.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		18EAAADD2C576F6F000C4895 /* CLNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLNavigationViewController.swift; sourceTree = "<group>"; };
 		18EAAADF2C57741F000C4895 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18EAAAE12C5774E2000C4895 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		18EAAAED2C577971000C4895 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		18EAAAEF2C58D5B1000C4895 /* ApiUrlConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrlConfig.swift; sourceTree = "<group>"; };
 		3013B547659B6C3D81055188 /* Pods-CreditLoan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditLoan.debug.xcconfig"; path = "Target Support Files/Pods-CreditLoan/Pods-CreditLoan.debug.xcconfig"; sourceTree = "<group>"; };
 		7B92A86CF3B5079EB3713561 /* Pods_CreditLoan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreditLoan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FE9930486DD2219D156F0F /* Pods-CreditLoan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditLoan.release.xcconfig"; path = "Target Support Files/Pods-CreditLoan/Pods-CreditLoan.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 				1810D8D62C4A6F8B00DA90B7 /* Mont-Regular.ttf */,
 				1810D8CB2C4A6B5800DA90B7 /* BBConfig.swift */,
 				18EAAAE12C5774E2000C4895 /* BaseModel.swift */,
+				1810D8D02C4A6C3200DA90B7 /* BBCommonView.swift */,
+				18EAAAEF2C58D5B1000C4895 /* ApiUrlConfig.swift */,
 			);
 			path = BBConfig;
 			sourceTree = "<group>";
@@ -111,6 +117,7 @@
 				18EAAAE72C5775CC000C4895 /* Bills */,
 				18EAAAE62C5775C7000C4895 /* Home */,
 				18EAAAE52C57759C000C4895 /* Login */,
+				18EAAAEA2C57766A000C4895 /* Frist */,
 				18EAAAE42C577599000C4895 /* BaseVc */,
 				1810D8D42C4A6F6F00DA90B7 /* BBConfig */,
 			);
@@ -120,8 +127,8 @@
 		18EAAAE32C57758C000C4895 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				18C426EA2C4A569D00A735A6 /* AppDelegate.swift */,
 				18C426F32C4A569E00A735A6 /* Assets.xcassets */,
+				18C426EA2C4A569D00A735A6 /* AppDelegate.swift */,
 				18C426F52C4A569E00A735A6 /* LaunchScreen.storyboard */,
 			);
 			path = Main;
@@ -130,9 +137,6 @@
 		18EAAAE42C577599000C4895 /* BaseVc */ = {
 			isa = PBXGroup;
 			children = (
-				1810D8D02C4A6C3200DA90B7 /* BBCommonView.swift */,
-				1810D8D22C4A6D2B00DA90B7 /* BBLaunchView.swift */,
-				1810D8C92C4A5E2700DA90B7 /* LaunchViewController.swift */,
 				1810D8C52C4A5DBE00DA90B7 /* BaseViewController.swift */,
 				1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */,
 				18EAAADB2C576B4B000C4895 /* CLTabBarViewController.swift */,
@@ -144,7 +148,8 @@
 		18EAAAE52C57759C000C4895 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				18EAAADF2C57741F000C4895 /* LoginViewController.swift */,
+				18EAAAEC2C577953000C4895 /* View */,
+				18EAAAEB2C577951000C4895 /* Controller */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -181,6 +186,31 @@
 				1810D8D92C4E2B5A00DA90B7 /* BBIDViewController.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		18EAAAEA2C57766A000C4895 /* Frist */ = {
+			isa = PBXGroup;
+			children = (
+				1810D8D22C4A6D2B00DA90B7 /* BBLaunchView.swift */,
+				1810D8C92C4A5E2700DA90B7 /* LaunchViewController.swift */,
+			);
+			path = Frist;
+			sourceTree = "<group>";
+		};
+		18EAAAEB2C577951000C4895 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18EAAADF2C57741F000C4895 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18EAAAEC2C577953000C4895 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18EAAAED2C577971000C4895 /* LoginView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B876A589A14FCA2403DE8E7C /* Pods */ = {
@@ -316,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EAAAF02C58D5B1000C4895 /* ApiUrlConfig.swift in Sources */,
 				1810D8CC2C4A6B5800DA90B7 /* BBConfig.swift in Sources */,
 				1810D8DC2C4E2B7400DA90B7 /* BBIDPopView.swift in Sources */,
 				18C426EB2C4A569D00A735A6 /* AppDelegate.swift in Sources */,
@@ -328,6 +359,7 @@
 				18EAAAD62C576AE1000C4895 /* BillsViewController.swift in Sources */,
 				1810D8C82C4A5E1600DA90B7 /* HomeViewController.swift in Sources */,
 				18EAAAE22C5774E2000C4895 /* BaseModel.swift in Sources */,
+				18EAAAEE2C577971000C4895 /* LoginView.swift in Sources */,
 				18EAAADC2C576B4B000C4895 /* CLTabBarViewController.swift in Sources */,
 				18EAAAE02C57741F000C4895 /* LoginViewController.swift in Sources */,
 				18EAAADE2C576F6F000C4895 /* CLNavigationViewController.swift in Sources */,

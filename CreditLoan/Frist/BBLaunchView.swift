@@ -20,19 +20,19 @@ class BBLaunchView: BBCommonView {
     }()
     
     lazy var welLabel: UILabel = {
-        let welLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 40)!, textColor: UIColor.init(hex: "#2C2C36"), textAlignment: .left)
+        let welLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 40.alpix())!, textColor: UIColor.init(hex: "#2C2C36"), textAlignment: .left)
         welLabel.text = "Welcome to"
         return welLabel
     }()
 
     lazy var descLabel: UILabel = {
-        let descLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 40)!, textColor: UIColor.init(hex: "#007CFB"), textAlignment: .left)
+        let descLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 40.alpix())!, textColor: UIColor.init(hex: "#007CFB"), textAlignment: .left)
         descLabel.text = "Credit Loan!"
         return descLabel
     }()
     
     lazy var descLabel1: UILabel = {
-        let descLabel1 = UILabel.chuangjianLabel(font: UIFont(name: Regular_Mont, size: 16)!, textColor: UIColor.init(hex: "#505457"), textAlignment: .left)
+        let descLabel1 = UILabel.chuangjianLabel(font: UIFont(name: Regular_Mont, size: 16.alpix())!, textColor: UIColor.init(hex: "#505457"), textAlignment: .left)
         descLabel1.text = "To help you make the most of our app, please complete the following simple new user guide so we can better understand your needs."
         descLabel1.numberOfLines = 0
         return descLabel1
@@ -49,7 +49,7 @@ class BBLaunchView: BBCommonView {
         startBtn.setTitle("Let's get started!", for: .normal)
         startBtn.setTitleColor(UIColor.init(hex: "#FFFFFF"), for: .normal)
         startBtn.layer.cornerRadius = 3
-        startBtn.titleLabel?.font = UIFont(name: Heavy_Mont, size: 18)
+        startBtn.titleLabel?.font = UIFont(name: Heavy_Mont, size: 18.alpix())
         startBtn.backgroundColor = UIColor.init(hex: "#007CFB")
         startBtn.addTarget(self, action: #selector(startBtnClick), for: .touchUpInside)
         return startBtn
@@ -60,7 +60,7 @@ class BBLaunchView: BBCommonView {
         notBtn.setTitle("Not necessary at the moment", for: .normal)
         notBtn.setTitleColor(UIColor.init(hex: "#B8C0C9"), for: .normal)
         notBtn.layer.cornerRadius = 3
-        notBtn.titleLabel?.font = UIFont(name: Heavy_Mont, size: 18)
+        notBtn.titleLabel?.font = UIFont(name: Heavy_Mont, size: 18.alpix())
         notBtn.backgroundColor = UIColor.init(hex: "#F2F3F5")
         notBtn.addTarget(self, action: #selector(notBtnClick), for: .touchUpInside)
         return notBtn

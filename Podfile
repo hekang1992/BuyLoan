@@ -32,6 +32,8 @@ target 'CreditLoan' do
   pod 'GKCycleScrollView', '~> 1.2.2'
   
   pod 'RxSwift', '~> 6.6.0'
+  
+  pod 'RxCocoa', '~> 6.6.0'
 
   # Pods for CreditLoan
 

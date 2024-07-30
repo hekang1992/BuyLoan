@@ -8,6 +8,15 @@
 import UIKit
 import HandyJSON
 
+var IS_LOGIN: Bool {
+    let us = UserDefaults.standard
+    if let session = us.object(forKey: SESSIONID) as? String {
+        return !session.isEmpty
+    } else {
+        return false
+    }
+}
+
 class BaseModel: NSObject, HandyJSON {
     required override init() {}
 }
