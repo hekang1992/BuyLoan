@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import Lottie
 
 let Heavy_Mont = "Mont-Heavy"
 
@@ -75,7 +76,7 @@ extension UILabel {
 }
 
 
-/* .................................................. */
+/************************************************/
 
 class NoCopyField: UITextField {
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
@@ -88,4 +89,79 @@ class NoCopyField: UITextField {
         }
         return super.canPerformAction(action, withSender: sender)
     }
+}
+
+/************************************************/
+
+class loadingView: UIView {
+    
+    lazy var grayView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        return view
+    }()
+    
+    lazy var hudView: LottieAnimationView = {
+        let hudView = LottieAnimationView(name: "loading.json", bundle: Bundle.main)
+        hudView.loopMode = .loop
+        hudView.play()
+        return hudView
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupViews()
+    }
+    
+    private func setupViews() {
+        addSubview(grayView)
+        grayView.addSubview(hudView)
+        grayView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        hudView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.size.equalTo(CGSize(width: 150.alpix(), height: 250.alpix()))
+        }
+    }
+}
+
+class ViewHud {
+    
+    static let loadView = loadingView()
+    
+    static func addLoadView() {
+        DispatchQueue.main.async {
+            if let keyWindow = UIApplication.shared.windows.first {
+                DispatchQueue.main.async {
+                    loadView.frame = keyWindow.bounds
+                    keyWindow.addSubview(loadView)
+                }
+            }
+        }
+    }
+    
+    static func hideLoadView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            loadView.removeFromSuperview()
+        }
+    }
+    
+}
+
+/************************************************/
+
+class delayTime {
+    
+    static func delay(_ delay: TimeInterval, closure: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            closure()
+        }
+    }
+
 }

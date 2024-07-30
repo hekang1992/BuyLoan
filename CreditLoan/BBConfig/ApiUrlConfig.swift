@@ -12,3 +12,6 @@ let apiHost = "http://8.220.137.160:9023"
 let apiUrlHost = "http://8.220.137.160:9023/good"
 
 let schemeUrl = "cll://we.win"
+
+
+
