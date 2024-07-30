@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow()
         window?.frame = UIScreen.main.bounds
-        window?.rootViewController = LoginViewController()
+        window?.rootViewController = BaseNavController(rootViewController: launchVc)
         kkanager()
         window?.makeKeyAndVisible()
         return true

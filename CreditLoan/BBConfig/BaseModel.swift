@@ -21,6 +21,11 @@ class BaseModel: NSObject, HandyJSON {
     required override init() {}
 }
 
+class CrueltyModel: BaseModel {
+    var forgets: Int?
+    var exile: String?
+    var cruelty: [String: Any]?
+}
 
 class LoginModel: BaseModel {
     

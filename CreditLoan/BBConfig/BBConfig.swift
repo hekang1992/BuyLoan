@@ -15,6 +15,8 @@ let Regular_Mont = "Mont-Regular"
 
 let SESSIONID = "SESSIONID"
 
+let LOGIN = "LOGIN"
+
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 
 let SCREEN_HEIGHT = UIScreen.main.bounds.size.height

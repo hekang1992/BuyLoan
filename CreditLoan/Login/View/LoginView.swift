@@ -130,7 +130,7 @@ class LoginView: BBCommonView {
         loginBtn.isEnabled = false
         loginBtn.setTitleColor(UIColor.init(hex: "#FFFFFF"), for: .normal)
         loginBtn.backgroundColor = UIColor.init(hex: "#007CFB")
-        loginBtn.setTitle("Login", for: .normal)
+        loginBtn.setTitle("LOGIN", for: .normal)
         loginBtn.titleLabel?.font = UIFont(name: Heavy_Mont, size: 18.alpix())
         return loginBtn
     }()

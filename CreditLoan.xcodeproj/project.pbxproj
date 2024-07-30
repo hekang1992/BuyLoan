@@ -31,6 +31,7 @@
 		18EAAAEE2C577971000C4895 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAED2C577971000C4895 /* LoginView.swift */; };
 		18EAAAF02C58D5B1000C4895 /* ApiUrlConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAEF2C58D5B1000C4895 /* ApiUrlConfig.swift */; };
 		18EAAAF42C58DFD3000C4895 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 18EAAAF32C58DFD3000C4895 /* loading.json */; };
+		18EAAAF62C58F4C1000C4895 /* LoginConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAF52C58F4C1000C4895 /* LoginConfig.swift */; };
 		44DD527AF83C6863218A93E2 /* Pods_CreditLoan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92A86CF3B5079EB3713561 /* Pods_CreditLoan.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		18EAAAED2C577971000C4895 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		18EAAAEF2C58D5B1000C4895 /* ApiUrlConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrlConfig.swift; sourceTree = "<group>"; };
 		18EAAAF32C58DFD3000C4895 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		18EAAAF52C58F4C1000C4895 /* LoginConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfig.swift; sourceTree = "<group>"; };
 		3013B547659B6C3D81055188 /* Pods-CreditLoan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditLoan.debug.xcconfig"; path = "Target Support Files/Pods-CreditLoan/Pods-CreditLoan.debug.xcconfig"; sourceTree = "<group>"; };
 		7B92A86CF3B5079EB3713561 /* Pods_CreditLoan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreditLoan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FE9930486DD2219D156F0F /* Pods-CreditLoan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditLoan.release.xcconfig"; path = "Target Support Files/Pods-CreditLoan/Pods-CreditLoan.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,13 +83,14 @@
 		1810D8D42C4A6F6F00DA90B7 /* BBConfig */ = {
 			isa = PBXGroup;
 			children = (
-				18EAAAF32C58DFD3000C4895 /* loading.json */,
 				1810D8D52C4A6F8B00DA90B7 /* Mont-Heavy.ttf */,
 				1810D8D62C4A6F8B00DA90B7 /* Mont-Regular.ttf */,
+				18EAAAF32C58DFD3000C4895 /* loading.json */,
 				1810D8CB2C4A6B5800DA90B7 /* BBConfig.swift */,
 				18EAAAE12C5774E2000C4895 /* BaseModel.swift */,
 				1810D8D02C4A6C3200DA90B7 /* BBCommonView.swift */,
 				18EAAAEF2C58D5B1000C4895 /* ApiUrlConfig.swift */,
+				18EAAAF52C58F4C1000C4895 /* LoginConfig.swift */,
 			);
 			path = BBConfig;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				18EAAADE2C576F6F000C4895 /* CLNavigationViewController.swift in Sources */,
 				18EAAADA2C576B11000C4895 /* GeRenViewController.swift in Sources */,
 				1810D8CA2C4A5E2700DA90B7 /* LaunchViewController.swift in Sources */,
+				18EAAAF62C58F4C1000C4895 /* LoginConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

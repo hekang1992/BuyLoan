@@ -24,11 +24,11 @@ class LaunchViewController: BaseViewController {
             make.edges.equalToSuperview()
         }
         launchView.block1 = { [weak self] in
-            let idVc = BBIDViewController()
-            self?.navigationController?.pushViewController(idVc, animated: true)
+            let loginVc = LoginViewController()
+            self?.navigationController?.pushViewController(loginVc, animated: true)
         }
         launchView.block2 = {
-            
+            exit(0)
         }
         
     }
