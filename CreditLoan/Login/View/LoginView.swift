@@ -13,6 +13,8 @@ class LoginView: BBCommonView {
     
     var block: sendCodeBlock?
     
+    var block1: sendCodeBlock?
+    
     lazy var icon: UIImageView = {
         let icon = UIImageView()
         icon.image = UIImage(named: "AppIcon")
@@ -125,6 +127,7 @@ class LoginView: BBCommonView {
     lazy var loginBtn: UIButton = {
         let loginBtn = UIButton(type: .custom)
         loginBtn.layer.cornerRadius = 3.alpix()
+        loginBtn.isEnabled = false
         loginBtn.setTitleColor(UIColor.init(hex: "#FFFFFF"), for: .normal)
         loginBtn.backgroundColor = UIColor.init(hex: "#007CFB")
         loginBtn.setTitle("Login", for: .normal)
@@ -248,6 +251,17 @@ extension LoginView {
             self.sureBtn.isSelected = !self.sureBtn.isSelected
             let imageName = self.sureBtn.isSelected ? "Group_yinyingxuanz" : "Group_yinying"
             self.sureBtn.setBackgroundImage(UIImage(named: imageName), for: .normal)
+            self.loginBtn.isEnabled = self.sureBtn.isSelected ? true : false
+        }).disposed(by: disposeBag)
+        loginBtn.rx.tap.subscribe(onNext: { [weak self] in
+            if let self = self {
+                if self.codeTx.text?.count != 0 {
+                    self.block1?(self.loginBtn)
+                }else {
+                    MBProgressHUD.wj_showPlainText("Please enter your verification code", view: nil)
+                }
+                
+            }
         }).disposed(by: disposeBag)
     }
     
@@ -257,7 +271,7 @@ extension LoginView {
     }
     
     @objc func userTapped() {
-        
+        MBProgressHUD.wj_showPlainText("隐私协议", view: nil)
     }
     
 }

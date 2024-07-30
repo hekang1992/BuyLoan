@@ -31,6 +31,9 @@ class LoginViewController: BaseViewController {
         login.block = { [weak self] btn in
             self?.sendcodeClick(btn)
         }
+        login.block1 = { [weak self] btn in
+            self?.sendcodeClick(btn)
+        }
     }
 
 }
