@@ -30,6 +30,7 @@
 		18EAAAE22C5774E2000C4895 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAE12C5774E2000C4895 /* BaseModel.swift */; };
 		18EAAAEE2C577971000C4895 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAED2C577971000C4895 /* LoginView.swift */; };
 		18EAAAF02C58D5B1000C4895 /* ApiUrlConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAAAEF2C58D5B1000C4895 /* ApiUrlConfig.swift */; };
+		18EAAAF22C58D8D7000C4895 /* lottiodin.json in Resources */ = {isa = PBXBuildFile; fileRef = 18EAAAF12C58D8D7000C4895 /* lottiodin.json */; };
 		44DD527AF83C6863218A93E2 /* Pods_CreditLoan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B92A86CF3B5079EB3713561 /* Pods_CreditLoan.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		18EAAAE12C5774E2000C4895 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		18EAAAED2C577971000C4895 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		18EAAAEF2C58D5B1000C4895 /* ApiUrlConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrlConfig.swift; sourceTree = "<group>"; };
+		18EAAAF12C58D8D7000C4895 /* lottiodin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottiodin.json; sourceTree = "<group>"; };
 		3013B547659B6C3D81055188 /* Pods-CreditLoan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditLoan.debug.xcconfig"; path = "Target Support Files/Pods-CreditLoan/Pods-CreditLoan.debug.xcconfig"; sourceTree = "<group>"; };
 		7B92A86CF3B5079EB3713561 /* Pods_CreditLoan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CreditLoan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FE9930486DD2219D156F0F /* Pods-CreditLoan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreditLoan.release.xcconfig"; path = "Target Support Files/Pods-CreditLoan/Pods-CreditLoan.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		1810D8D42C4A6F6F00DA90B7 /* BBConfig */ = {
 			isa = PBXGroup;
 			children = (
+				18EAAAF12C58D8D7000C4895 /* lottiodin.json */,
 				1810D8D52C4A6F8B00DA90B7 /* Mont-Heavy.ttf */,
 				1810D8D62C4A6F8B00DA90B7 /* Mont-Regular.ttf */,
 				1810D8CB2C4A6B5800DA90B7 /* BBConfig.swift */,
@@ -292,6 +295,7 @@
 			files = (
 				1810D8D72C4A6F8B00DA90B7 /* Mont-Heavy.ttf in Resources */,
 				1810D8D82C4A6F8B00DA90B7 /* Mont-Regular.ttf in Resources */,
+				18EAAAF22C58D8D7000C4895 /* lottiodin.json in Resources */,
 				18C426F42C4A569E00A735A6 /* Assets.xcassets in Resources */,
 				18C426F72C4A569E00A735A6 /* Base in Resources */,
 			);
