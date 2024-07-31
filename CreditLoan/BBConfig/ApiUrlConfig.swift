@@ -41,9 +41,7 @@ extension wangluoManager {
             AF.request(apiUrlString, method: method, parameters: params, headers: headers).responseData { response in
                 switch response.result {
                 case .success(_):
-                    if response.data == nil {
-                        errorBlock("failureData")
-                    }else {
+                    if response.data != nil {
                         let jsonStr = NSString(data:response.data! ,encoding: String.Encoding.utf8.rawValue)
                         if let model = JSONDeserializer<CrueltyModel>.deserializeFrom(json: jsonStr as String?) {
                             if model.forgets == -2 {
@@ -52,10 +50,12 @@ extension wangluoManager {
                                 complete(model)
                             }
                         }
+                    }else {
+                        errorBlock("")
                     }
                     break
-                case .failure(let failureData):
-                    errorBlock(failureData)
+                case .failure(let failure):
+                    errorBlock(failure)
                     break
                 }
             }
@@ -86,9 +86,7 @@ extension wangluoManager {
             .responseData { response in
                 switch response.result {
                 case .success(_):
-                    if response.data == nil {
-                        errorBlock("failureData")
-                    }else {
+                    if response.data != nil {
                         let jsonStr = NSString(data:response.data! ,encoding: String.Encoding.utf8.rawValue)
                         if let model = JSONDeserializer<CrueltyModel>.deserializeFrom(json: jsonStr as String?) {
                             if model.forgets == -2 {
@@ -97,10 +95,12 @@ extension wangluoManager {
                                 complete(model)
                             }
                         }
+                    }else {
+                        errorBlock("")
                     }
                     break
-                case .failure(let failureData):
-                    errorBlock(failureData)
+                case .failure(let failure):
+                    errorBlock(failure)
                     break
                 }
             }

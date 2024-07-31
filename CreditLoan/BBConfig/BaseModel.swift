@@ -19,5 +19,7 @@ class CrueltyModel: BaseModel {
 }
 
 class LoginModel: BaseModel {
-    
+    var earliest: String?
+    var glazed: String?
+    var declamation: String?
 }

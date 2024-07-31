@@ -14,6 +14,11 @@ class LaunchViewController: BaseViewController {
         let launchView = BBLaunchView()
         return launchView
     }()
+    
+    lazy var perView: PerPopView = {
+        let perView = PerPopView(frame: self.view.bounds)
+        return perView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +35,19 @@ class LaunchViewController: BaseViewController {
         launchView.block2 = {
             exit(0)
         }
-        
+        delayTime.delay(0.5) { [weak self] in
+            self?.popPer()
+        }
     }
 
 }
 
 extension LaunchViewController {
     
+    func popPer() {
+        let alertVc = TYAlertController(alert: perView, preferredStyle: .alert)
+        self.present(alertVc!, animated: true)
+    }
     
     
 }

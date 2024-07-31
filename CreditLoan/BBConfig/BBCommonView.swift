@@ -20,7 +20,7 @@ class BBCommonView: UIView {
 
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
-        scrollView.backgroundColor = UIColor.init(hex: "#C5D7FB")
+        scrollView.backgroundColor = UIColor.init(hex: "#F2F6FF")
         scrollView.contentInsetAdjustmentBehavior = .never
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false

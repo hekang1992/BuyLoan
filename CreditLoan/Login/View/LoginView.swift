@@ -127,7 +127,6 @@ class LoginView: BBCommonView {
     lazy var loginBtn: UIButton = {
         let loginBtn = UIButton(type: .custom)
         loginBtn.layer.cornerRadius = 3.alpix()
-        loginBtn.isEnabled = false
         loginBtn.setTitleColor(UIColor.init(hex: "#FFFFFF"), for: .normal)
         loginBtn.backgroundColor = UIColor.init(hex: "#007CFB")
         loginBtn.setTitle("LOGIN", for: .normal)
@@ -223,18 +222,26 @@ extension LoginView {
             make.bottom.equalToSuperview().offset(-50.alpix())
         }
         phoneTx.rx.text.orEmpty
-            .map { $0.prefix(13) }
+            .distinctUntilChanged()
+            .map { $0.prefix(10) }
             .subscribe(onNext: { [weak self] value in
                 if let self = self {
                     self.phoneTx.text = String(value)
                     self.rightView.isHidden = value.count == 0
+                    if value.count == 10 {
+                        self.phoneTx.resignFirstResponder()
+                    }
                 }
             }).disposed(by: disposeBag)
         codeTx.rx.text.orEmpty
+            .distinctUntilChanged()
             .map { $0.prefix(6) }
             .subscribe(onNext: { [weak self] value in
                 if let self = self {
                     self.codeTx.text = String(value)
+                    if value.count == 6 {
+                        self.codeTx.resignFirstResponder()
+                    }
                 }
             }).disposed(by: disposeBag)
         sendCodeBtn.rx.tap.subscribe(onNext: { [weak self] in
@@ -248,21 +255,24 @@ extension LoginView {
         }).disposed(by: disposeBag)
         sureBtn.rx.tap.subscribe(onNext: { [weak self] in
             guard let self = self else { return }
-            self.sureBtn.isSelected = !self.sureBtn.isSelected
+            self.sureBtn.isSelected.toggle()
             let imageName = self.sureBtn.isSelected ? "Group_yinyingxuanz" : "Group_yinying"
             self.sureBtn.setBackgroundImage(UIImage(named: imageName), for: .normal)
-            self.loginBtn.isEnabled = self.sureBtn.isSelected ? true : false
         }).disposed(by: disposeBag)
-        loginBtn.rx.tap.subscribe(onNext: { [weak self] in
-            if let self = self {
-                if self.codeTx.text?.count != 0 {
-                    self.block1?(self.loginBtn)
-                }else {
-                    MBProgressHUD.wj_showPlainText("Please enter your verification code", view: nil)
+        loginBtn.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                guard self.sureBtn.isSelected else {
+                    MBProgressHUD.wj_showPlainText("Please take a moment to thoroughly review the privacy agreement before login", view: nil)
+                    return
                 }
-                
-            }
-        }).disposed(by: disposeBag)
+                guard let codeText = self.codeTx.text, !codeText.isEmpty else {
+                    MBProgressHUD.wj_showPlainText("Please enter your verification code", view: nil)
+                    return
+                }
+                self.block1?(self.loginBtn)
+            })
+            .disposed(by: disposeBag)
     }
     
     @objc func delTapped() {

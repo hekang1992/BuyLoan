@@ -22,48 +22,44 @@ var IS_LOGIN: Bool {
 }
 
 class LoginConfig: NSObject {
-
-    static func getAppVersion() -> String {
+    
+    static func getVersion() -> String {
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             return version
         }
-        return "Version information not available"
+        return "1.0.0"
     }
-
+    
     static func getaras() -> [String: String]{
+        let befell = CLDeviceInfo.usingProxy()
+        let nullified: String = "iOS"
         let overturned: String = UIDevice.current.systemVersion
         var baffled: String = ""
         if let sessionId: String = UserDefaults.standard.object(forKey: CL_SESSIONID) as? String {
             baffled = sessionId
         }
-        let walkflat: String = "siccs"
-        let period: String = CLDeviceInfo.getIDFV() ?? ""
-        let basket = CLDeviceInfo.usingProxy()
-        let nullified: String = "iOS"
-        let change: String = "pc"
-        let peach = CLDeviceInfo.vpnConnected()
-        let seehow: String = getAppVersion()
-        let egyptians: String = Device.current.description
-        let declared: String = CLDeviceInfo.getIDFV() ?? ""
-        let total = "14"
-        let monthly = "8"
-        let amount = "13"
+        let observation: String = "cll"
+        let fundamental: String = CLDeviceInfo.getIDFV() ?? ""
+        let farther = CLDeviceInfo.vpnConnected()
+        let built: String = getVersion()
+        let objectionable: String = Device.current.description
+        let virtuous: String = CLDeviceInfo.getIDFV() ?? ""
         
         let dict1 = ["nullified": nullified,
-                    "seehow": seehow,
-                    "egyptians": egyptians,
-                    "declared": declared,
-                     "total": total,
-                     "monthly": monthly,
-                     "amount": amount]
+                     "built": built,
+                     "virtuous": virtuous,
+                     "befell": befell,
+                     "farther": farther,
+                     "objectionable": objectionable,
+                     "zeeker": "001"]
         
-        let dict2 = ["overturned": overturned,
-                     "walkflat": walkflat,
-                     "baffled": baffled,
-                     "period": period,
-                     "change": change,
-                     "peach": peach,
-                     "basket": basket]
+        let dict2 = ["baffled": baffled,
+                     "fundamental": fundamental,
+                     "egg": "1",
+                     "overturned": overturned,
+                     "observation": observation,
+                     "type": "1",
+                     "islogin": "1"]
         
         let allDict = dict2.reduce(into: dict1) { (result, item) in
             result[item.key] = item.value
@@ -71,15 +67,15 @@ class LoginConfig: NSObject {
         return allDict
     }
     
-    static func saveLoginInfo(_ phone: String, _ sessionID: String) {
-        UserDefaults.standard.setValue(phone, forKey: CL_LOGIN)
-        UserDefaults.standard.setValue(sessionID, forKey: CL_SESSIONID)
-        UserDefaults.standard.synchronize()
-    }
-    
     static func removeLoginInfo() {
         UserDefaults.standard.setValue("", forKey: CL_LOGIN)
         UserDefaults.standard.setValue("", forKey: CL_SESSIONID)
+        UserDefaults.standard.synchronize()
+    }
+    
+    static func saveLoginInfo(_ phoneNumber: String, _ authID: String) {
+        UserDefaults.standard.setValue(authID, forKey: CL_SESSIONID)
+        UserDefaults.standard.setValue(phoneNumber, forKey: CL_LOGIN)
         UserDefaults.standard.synchronize()
     }
     
@@ -107,14 +103,13 @@ class CLDeviceInfo {
         }
     }
     
-   static func getIDFV() -> String? {
+    static func getIDFV() -> String? {
         if let uuid = SAMKeychain.password(forService: "Key_Service", account: "Key_Account"), !uuid.isEmpty {
             return uuid
         } else {
             if let deviceIDFV = UIDevice.current.identifierForVendor?.uuidString {
                 let success = SAMKeychain.setPassword(deviceIDFV, forService: "Key_Service", account: "Key_Account")
                 if success {
-                    print("UUID>>>>>>>>\(deviceIDFV)")
                     return deviceIDFV
                 } else {
                     return ""
@@ -159,7 +154,7 @@ class CLDeviceInfo {
         let needsConnection = flags.contains(.connectionRequired)
         return isReachable && !needsConnection ? "1" : "0"
     }
-
+    
     static func getCurrentTime() -> String {
         let currentTime = Date().timeIntervalSince1970
         let currentTimeMillis = String(Int64(currentTime * 1000))
