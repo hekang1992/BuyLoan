@@ -65,7 +65,6 @@ class LoginView: BBCommonView {
         phoneTx.textColor = UIColor.init(hex: "#2C2C36")
         phoneTx.rightView = rightView
         phoneTx.rightViewMode = .always
-        
         return phoneTx
     }()
     
@@ -152,7 +151,6 @@ extension LoginView {
         whiteView.backgroundColor = UIColor.init(hex: "#F9FAFE")
         scrollView.backgroundColor = UIColor.init(hex: "#F9FAFE")
         backBtn.isHidden = true
-        
         scrollView.addSubview(icon)
         scrollView.addSubview(phoneView)
         phoneView.addSubview(clabel)

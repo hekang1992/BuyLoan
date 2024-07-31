@@ -47,6 +47,9 @@ extension LaunchViewController {
     func popPer() {
         let alertVc = TYAlertController(alert: perView, preferredStyle: .alert)
         self.present(alertVc!, animated: true)
+        perView.block = { [weak self] in
+            self?.dismiss(animated: true)
+        }
     }
     
     

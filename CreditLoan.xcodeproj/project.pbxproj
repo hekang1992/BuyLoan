@@ -119,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				18C426F82C4A569E00A735A6 /* Info.plist */,
+				18C426F32C4A569E00A735A6 /* Assets.xcassets */,
 				18EAAAE32C57758C000C4895 /* Main */,
 				18EAAAE92C5775E2000C4895 /* Auth */,
 				18EAAAE82C5775D3000C4895 /* Profile */,
@@ -135,7 +136,6 @@
 		18EAAAE32C57758C000C4895 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				18C426F32C4A569E00A735A6 /* Assets.xcassets */,
 				18C426EA2C4A569D00A735A6 /* AppDelegate.swift */,
 				18C426F52C4A569E00A735A6 /* LaunchScreen.storyboard */,
 			);
