@@ -7,6 +7,8 @@
 
 import UIKit
 import TYAlertController
+import RxSwift
+import RxCocoa
 
 class LaunchViewController: BaseViewController {
     
@@ -19,6 +21,11 @@ class LaunchViewController: BaseViewController {
         let perView = PerPopView(frame: self.view.bounds)
         return perView
     }()
+    
+    lazy var outView: LogOutView = {
+        let outView = LogOutView(frame: self.view.bounds)
+        return outView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +36,22 @@ class LaunchViewController: BaseViewController {
             make.edges.equalToSuperview()
         }
         launchView.block1 = { [weak self] in
-            let loginVc = LoginViewController()
-            self?.navigationController?.pushViewController(loginVc, animated: true)
+            if IS_LOGIN {
+                //go home
+                NotificationCenter.default.post(name: NSNotification.Name(HOME_VC), object: nil)
+            }else {
+                let loginVc = LoginViewController()
+                self?.navigationController?.pushViewController(loginVc, animated: true)
+            }
+            
         }
-        launchView.block2 = {
-            exit(0)
+        launchView.block2 = { [weak self] in
+            self?.outPer()
         }
         delayTime.delay(0.5) { [weak self] in
             self?.popPer()
         }
+        
     }
 
 }
@@ -52,5 +66,17 @@ extension LaunchViewController {
         }
     }
     
+    func outPer() {
+        let alertVc = TYAlertController(alert: outView, preferredStyle: .alert)
+        self.present(alertVc!, animated: true)
+        outView.block1 = { [weak self] in
+            self?.dismiss(animated: true, completion: {
+                exit(0)
+            })
+        }
+        outView.block2 = { [weak self] in
+            self?.dismiss(animated: true)
+        }
+    }
     
 }

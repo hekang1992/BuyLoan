@@ -17,6 +17,8 @@ let CL_SESSIONID = "SESSIONID"
 
 let CL_LOGIN = "LOGIN"
 
+let HOME_VC = "HOME_VC"
+
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
 
 let SCREEN_HEIGHT = UIScreen.main.bounds.size.height

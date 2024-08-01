@@ -84,9 +84,10 @@ extension LoginViewController {
         let longest = "1"
         let dict = ["glazed": glazed, "mastery": mastery, "longest": longest]
         ViewHud.addLoadView()
-        wangluoManager.shared.requestAPI(params: dict, pageUrl: "/cll/whichWhere", method: .post) { successModel in
+        wangluoManager.shared.requestAPI(params: dict, pageUrl: "/cll/whichWhere", method: .post) { [weak self] successModel in
             if let forgets = successModel.forgets, forgets == 0 || forgets == 00 {
                 if let model = JSONDeserializer<LoginModel>.deserializeFrom(dict: successModel.cruelty), let phone = model.glazed, let sess = model.declamation {
+                    self?.pushEv()
                     LoginConfig.saveLoginInfo(phone, sess)
                 }
             }
@@ -95,6 +96,11 @@ extension LoginViewController {
         } errorBlock: { error in
             ViewHud.hideLoadView()
         }
+    }
+    
+    func pushEv() {
+        let wenVc = WenJuanViewController()
+        self.navigationController?.pushViewController(wenVc, animated: true)
     }
     
 }

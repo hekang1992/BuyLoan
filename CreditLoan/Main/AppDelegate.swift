@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.frame = UIScreen.main.bounds
         window?.rootViewController = BaseNavController(rootViewController: launchVc)
         kkanager()
+        notifactionAll()
         window?.makeKeyAndVisible()
         return true
     }
@@ -38,6 +39,14 @@ extension AppDelegate {
         manager.keyboardDistanceFromTextField = 5.alpix()
         manager.shouldResignOnTouchOutside = true
         manager.enable = true
+    }
+    
+    func notifactionAll() {
+        NotificationCenter.default.addObserver(self, selector: #selector(homeVc), name: Notification.Name(HOME_VC), object: nil)
+    }
+    
+    @objc func homeVc() {
+        self.window?.rootViewController = BaseNavController(rootViewController: CLTabBarViewController())
     }
     
 }

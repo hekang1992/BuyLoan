@@ -23,3 +23,13 @@ class LoginModel: BaseModel {
     var glazed: String?
     var declamation: String?
 }
+
+class wenjuanModel: BaseModel {
+    var homeRe: [homeReModel]?
+    var anxiety: [homeReModel]?
+}
+
+class homeReModel: BaseModel {
+    var acerbities: String?
+    var faults: String?
+}

@@ -65,6 +65,7 @@ class LoginView: BBCommonView {
         phoneTx.textColor = UIColor.init(hex: "#2C2C36")
         phoneTx.rightView = rightView
         phoneTx.rightViewMode = .always
+        phoneTx.text = "1243214"
         return phoneTx
     }()
     
@@ -86,6 +87,7 @@ class LoginView: BBCommonView {
         codeTx.attributedPlaceholder = attrString
         codeTx.font = UIFont(name: Heavy_Mont, size: 18.alpix())
         codeTx.textColor = UIColor.init(hex: "#2C2C36")
+        codeTx.text = "912911"
         return codeTx
     }()
     

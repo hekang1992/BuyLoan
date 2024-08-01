@@ -319,6 +319,7 @@ class zhengqueCell: GKCycleScrollViewCell {
 
 
 class PaddedLabel: UILabel {
+    
     var textInsets = UIEdgeInsets.zero {
         didSet {
             setNeedsDisplay()
@@ -334,4 +335,5 @@ class PaddedLabel: UILabel {
         return CGSize(width: size.width + textInsets.left + textInsets.right,
                       height: size.height + textInsets.top + textInsets.bottom)
     }
+    
 }

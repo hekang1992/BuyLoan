@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class BaseViewController: UIViewController {
+    
+    lazy var disposeBag = {
+        return DisposeBag()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
