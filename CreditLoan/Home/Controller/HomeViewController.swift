@@ -8,11 +8,20 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
+    
+    lazy var oneView: HomeOneView = {
+        let oneView = HomeOneView()
+        return oneView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.addSubview(oneView)
+        oneView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 
     /*

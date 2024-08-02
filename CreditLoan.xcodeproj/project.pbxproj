@@ -19,6 +19,7 @@
 		1810D8DC2C4E2B7400DA90B7 /* BBIDPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */; };
 		1810D8DE2C4E463B00DA90B7 /* BBIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */; };
 		1810D8E02C4E48E600DA90B7 /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */; };
+		18B8140A2C5C891800ACEA1F /* HomeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B814092C5C891800ACEA1F /* HomeOneView.swift */; };
 		18C426EB2C4A569D00A735A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C426EA2C4A569D00A735A6 /* AppDelegate.swift */; };
 		18C426F42C4A569E00A735A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C426F32C4A569E00A735A6 /* Assets.xcassets */; };
 		18C426F72C4A569E00A735A6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 18C426F62C4A569E00A735A6 /* Base */; };
@@ -53,6 +54,7 @@
 		1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBIDPopView.swift; sourceTree = "<group>"; };
 		1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBIDView.swift; sourceTree = "<group>"; };
 		1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
+		18B814092C5C891800ACEA1F /* HomeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOneView.swift; sourceTree = "<group>"; };
 		18C426E72C4A569D00A735A6 /* CreditLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C426EA2C4A569D00A735A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C426F32C4A569E00A735A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +105,22 @@
 				1810D8D02C4A6C3200DA90B7 /* BBCommonView.swift */,
 			);
 			path = BBConfig;
+			sourceTree = "<group>";
+		};
+		18B814072C5C88F000ACEA1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1810D8C72C4A5E1600DA90B7 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18B814082C5C88F300ACEA1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18B814092C5C891800ACEA1F /* HomeOneView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		18C426DE2C4A569D00A735A6 = {
@@ -173,7 +191,8 @@
 		18EAAAE62C5775C7000C4895 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1810D8C72C4A5E1600DA90B7 /* HomeViewController.swift */,
+				18B814082C5C88F300ACEA1F /* View */,
+				18B814072C5C88F000ACEA1F /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -408,6 +427,7 @@
 				18EAAADA2C576B11000C4895 /* GeRenViewController.swift in Sources */,
 				1810D8CA2C4A5E2700DA90B7 /* LaunchViewController.swift in Sources */,
 				18EAAAF62C58F4C1000C4895 /* LoginConfig.swift in Sources */,
+				18B8140A2C5C891800ACEA1F /* HomeOneView.swift in Sources */,
 				18FD72CA2C5B707F0024D6A5 /* WenJuanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
