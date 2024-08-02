@@ -62,6 +62,7 @@ class WenJuanThreeViewController: BaseViewController {
             .foregroundColor: UIColor.init(hex: "#DDE2E6") as Any,
             .font: UIFont(name: Heavy_Mont, size: 18.alpix())!
         ])
+        neironTe.text = "50000"
         neironTe.attributedPlaceholder = attrString
         neironTe.font = UIFont(name: Heavy_Mont, size: 18.alpix())
         neironTe.textColor = UIColor.init(hex: "#2C2C36")
@@ -195,8 +196,7 @@ extension WenJuanThreeViewController {
         ViewHud.addLoadView()
         wangluoManager.shared.requestAPI(params: ["type" : self.neironTe.text ?? ""], pageUrl: "/cll/doorPeng", method: .post) { successModel in
             if let forgets = successModel.forgets, forgets == 0 || forgets == 00 {
-                //go home
-                
+                NotificationCenter.default.post(name: NSNotification.Name(HOME_VC), object: nil)
             }
             ViewHud.hideLoadView()
         } errorBlock: { error in

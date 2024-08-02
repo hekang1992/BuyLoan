@@ -13,14 +13,13 @@ let apiHost = "http://8.220.137.160:9023"
 
 let schemeUrl = "cll://we.win"
 
+typealias CompleteBlock = (_ successModel: CrueltyModel) -> Void
+
+typealias NSErrorBlock = (_ error: Any) -> Void
 
 class wangluoManager: NSObject {
     
     static let shared = wangluoManager()
-    
-    typealias CompleteBlock = (_ successModel: CrueltyModel) -> Void
-    
-    typealias NSErrorBlock = (_ error: Any) -> Void
     
     let headers: HTTPHeaders = [
         "Connection": "keep-alive",

@@ -23,15 +23,28 @@ class HomeViewController: BaseViewController {
             make.edges.equalToSuperview()
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        homeData()
     }
-    */
 
+}
+
+
+extension HomeViewController {
+    
+    func homeData() {
+        ViewHud.addLoadView()
+        wangluoManager.shared.requestAPI(params: [:], pageUrl: "/cll/frontAmple", method: .get) { successModel in
+            if let forgets = successModel.forgets, forgets == 0 || forgets == 00 {
+                print("successModel>>>>>>\(successModel.cruelty ?? [:])")
+            }
+            ViewHud.hideLoadView()
+        } errorBlock: { error in
+            ViewHud.hideLoadView()
+        }
+
+    }
+    
 }

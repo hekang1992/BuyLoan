@@ -28,9 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         return true
     }
-
 }
-
 
 extension AppDelegate {
     

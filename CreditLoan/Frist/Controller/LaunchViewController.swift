@@ -37,7 +37,6 @@ class LaunchViewController: BaseViewController {
         }
         launchView.block1 = { [weak self] in
             if IS_LOGIN {
-                //go home
                 NotificationCenter.default.post(name: NSNotification.Name(HOME_VC), object: nil)
             }else {
                 let loginVc = LoginViewController()
