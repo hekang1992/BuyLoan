@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import HandyJSON
 
 class HomeViewController: BaseViewController {
     
@@ -31,14 +32,18 @@ class HomeViewController: BaseViewController {
 
 }
 
-
 extension HomeViewController {
     
     func homeData() {
         ViewHud.addLoadView()
-        wangluoManager.shared.requestAPI(params: [:], pageUrl: "/cll/frontAmple", method: .get) { successModel in
+        wangluoManager.shared.requestAPI(params: [:], pageUrl: "/cll/frontAmple", method: .get) { [weak self] successModel in
             if let forgets = successModel.forgets, forgets == 0 || forgets == 00 {
-                print("successModel>>>>>>\(successModel.cruelty ?? [:])")
+                if let model = JSONDeserializer<CrueltyModel>.deserializeFrom(dict: successModel.cruelty) {
+                    self?.oneView.bannerModel = model.feminine
+                    self?.oneView.bigCardModel = model.surmises
+                    self?.oneView.reqModel = model.lilyvi
+                    self?.oneView.tableView.reloadData()
+                }
             }
             ViewHud.hideLoadView()
         } errorBlock: { error in

@@ -9,6 +9,12 @@ import UIKit
 
 class HomeOneView: UIView {
     
+    var bannerModel: feminineModel?
+    
+    var bigCardModel: surmisesModel?
+    
+    var reqModel: feminineModel?
+    
     lazy var bgView: UIView = {
         let bgView = UIView()
         bgView.backgroundColor = UIColor.init(hex: "#2C2C36")
@@ -31,6 +37,9 @@ class HomeOneView: UIView {
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.contentInsetAdjustmentBehavior = .never
+        tableView.register(HomeBannerCell.self, forCellReuseIdentifier: "HomeBannerCell")
+        tableView.register(HomeBigCardCell.self, forCellReuseIdentifier: "HomeBigCardCell")
+        tableView.register(HomeReqCell.self, forCellReuseIdentifier: "HomeReqCell")
         return tableView
     }()
     
@@ -48,7 +57,7 @@ class HomeOneView: UIView {
             make.size.equalTo(CGSize(width: 335.alpix(), height: 118.alpix()))
         }
         tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 0, bottom: CLTabBarConfig.tabBarHeight, right: 0))
         }
     }
     
@@ -62,7 +71,11 @@ class HomeOneView: UIView {
 extension HomeOneView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if (0...1).contains(section) {
+            return 1
+        }else {
+            return reqModel?.religion?.count ?? 0
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -70,20 +83,39 @@ extension HomeOneView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "CellIdentifier"
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0): 
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeBannerCell", for: indexPath) as? HomeBannerCell {
+                cell.model = bannerModel
+                cell.selectionStyle = .none
+                cell.backgroundColor = .clear
+                return cell
+            }
+        case (1, 0):
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeBigCardCell", for: indexPath) as? HomeBigCardCell {
+                cell.model = bigCardModel?.religion
+                cell.selectionStyle = .none
+                cell.backgroundColor = .clear
+                return cell
+            }
+        case (2, 0):
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeReqCell", for: indexPath) as? HomeReqCell {
+                cell.layer.cornerRadius = 3.alpix()
+                cell.selectionStyle = .none
+                cell.backgroundColor = .clear
+                return cell
+            }
+        default:
+            return UITableViewCell()
         }
-        cell?.textLabel?.text = "dfasf"
-        return cell!
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 40.alpix()
         }else if section == 1 {
-            return 46.alpix()
+            return 40.alpix()
         }else {
             return 40.alpix()
         }
@@ -94,3 +126,6 @@ extension HomeOneView: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
+
+

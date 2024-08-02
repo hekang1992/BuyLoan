@@ -20,6 +20,9 @@
 		1810D8DE2C4E463B00DA90B7 /* BBIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */; };
 		1810D8E02C4E48E600DA90B7 /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */; };
 		18B8140A2C5C891800ACEA1F /* HomeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B814092C5C891800ACEA1F /* HomeOneView.swift */; };
+		18B8140C2C5CD73C00ACEA1F /* HomeBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8140B2C5CD73C00ACEA1F /* HomeBannerCell.swift */; };
+		18B8140E2C5CDFC100ACEA1F /* HomeBigCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8140D2C5CDFC100ACEA1F /* HomeBigCardCell.swift */; };
+		18B814102C5CEC9C00ACEA1F /* HomeReqCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8140F2C5CEC9C00ACEA1F /* HomeReqCell.swift */; };
 		18C426EB2C4A569D00A735A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C426EA2C4A569D00A735A6 /* AppDelegate.swift */; };
 		18C426F42C4A569E00A735A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C426F32C4A569E00A735A6 /* Assets.xcassets */; };
 		18C426F72C4A569E00A735A6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 18C426F62C4A569E00A735A6 /* Base */; };
@@ -55,6 +58,9 @@
 		1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBIDView.swift; sourceTree = "<group>"; };
 		1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
 		18B814092C5C891800ACEA1F /* HomeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOneView.swift; sourceTree = "<group>"; };
+		18B8140B2C5CD73C00ACEA1F /* HomeBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCell.swift; sourceTree = "<group>"; };
+		18B8140D2C5CDFC100ACEA1F /* HomeBigCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBigCardCell.swift; sourceTree = "<group>"; };
+		18B8140F2C5CEC9C00ACEA1F /* HomeReqCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReqCell.swift; sourceTree = "<group>"; };
 		18C426E72C4A569D00A735A6 /* CreditLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C426EA2C4A569D00A735A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C426F32C4A569E00A735A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				18B814092C5C891800ACEA1F /* HomeOneView.swift */,
+				18B8140B2C5CD73C00ACEA1F /* HomeBannerCell.swift */,
+				18B8140D2C5CDFC100ACEA1F /* HomeBigCardCell.swift */,
+				18B8140F2C5CEC9C00ACEA1F /* HomeReqCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B8140C2C5CD73C00ACEA1F /* HomeBannerCell.swift in Sources */,
 				18EAAAF02C58D5B1000C4895 /* ApiUrlConfig.swift in Sources */,
 				18FD72CE2C5B76580024D6A5 /* WenJuanThreeViewController.swift in Sources */,
 				18D1B9CF2C5A468200B3F313 /* PerPopView.swift in Sources */,
@@ -420,9 +430,11 @@
 				18EAAAE22C5774E2000C4895 /* BaseModel.swift in Sources */,
 				18EAAAEE2C577971000C4895 /* LoginView.swift in Sources */,
 				18EAAADC2C576B4B000C4895 /* CLTabBarViewController.swift in Sources */,
+				18B814102C5CEC9C00ACEA1F /* HomeReqCell.swift in Sources */,
 				18FD72C82C5B58DF0024D6A5 /* LogOutView.swift in Sources */,
 				18EAAAE02C57741F000C4895 /* LoginViewController.swift in Sources */,
 				18FD72CC2C5B764D0024D6A5 /* WenJuanTwoViewController.swift in Sources */,
+				18B8140E2C5CDFC100ACEA1F /* HomeBigCardCell.swift in Sources */,
 				18EAAADE2C576F6F000C4895 /* CLNavigationViewController.swift in Sources */,
 				18EAAADA2C576B11000C4895 /* GeRenViewController.swift in Sources */,
 				1810D8CA2C4A5E2700DA90B7 /* LaunchViewController.swift in Sources */,

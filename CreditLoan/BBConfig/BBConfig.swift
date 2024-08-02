@@ -169,3 +169,21 @@ class delayTime {
     }
 
 }
+
+
+class CLTabBarConfig {
+    
+    static var safeAreaBottomHeight:CGFloat {
+        var safeHeight:CGFloat = 0;
+        if #available(iOS 11.0, *) {
+            let window = UIApplication.shared.delegate!.window!!
+            safeHeight = window.safeAreaInsets.bottom
+        }
+        return safeHeight
+    }
+    
+    static var tabBarHeight:CGFloat {
+        return 49 + safeAreaBottomHeight
+    }
+    
+}
