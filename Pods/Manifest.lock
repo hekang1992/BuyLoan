@@ -1,4 +1,7 @@
 PODS:
+  - AAILiveness (2.0.8):
+    - AAINetwork
+  - AAINetwork (1.0.2)
   - Alamofire (5.8.1)
   - BRPickerView (2.8.1):
     - BRPickerView/AddressPickerView (= 2.8.1)
@@ -32,6 +35,8 @@ PODS:
   - TYAlertController (1.2.0)
 
 DEPENDENCIES:
+  - "AAILiveness (from `{:http=>\"https://prod-guardian-cv.oss-ap-southeast-5.aliyuncs.com/sdk/iOS-liveness-detection/2.0.8/iOS-Liveness-SDK-V2.0.8.tar.bz2\", :type=>:tbz}`)"
+  - "AAINetwork (from `{:http=>\"https://prod-guardian-cv.oss-ap-southeast-5.aliyuncs.com/sdk/iOS-libraries/AAINetwork/AAINetwork-V1.0.2.tar.bz2\", :type=>:tbz}`)"
   - Alamofire (~> 5.8.1)
   - BRPickerView (~> 2.8.1)
   - DeviceKit (~> 5.2.2)
@@ -69,7 +74,25 @@ SPEC REPOS:
     - SnapKit
     - TYAlertController
 
+EXTERNAL SOURCES:
+  AAILiveness:
+    :http: https://prod-guardian-cv.oss-ap-southeast-5.aliyuncs.com/sdk/iOS-liveness-detection/2.0.8/iOS-Liveness-SDK-V2.0.8.tar.bz2
+    :type: :tbz
+  AAINetwork:
+    :http: https://prod-guardian-cv.oss-ap-southeast-5.aliyuncs.com/sdk/iOS-libraries/AAINetwork/AAINetwork-V1.0.2.tar.bz2
+    :type: :tbz
+
+CHECKOUT OPTIONS:
+  AAILiveness:
+    :http: https://prod-guardian-cv.oss-ap-southeast-5.aliyuncs.com/sdk/iOS-liveness-detection/2.0.8/iOS-Liveness-SDK-V2.0.8.tar.bz2
+    :type: :tbz
+  AAINetwork:
+    :http: https://prod-guardian-cv.oss-ap-southeast-5.aliyuncs.com/sdk/iOS-libraries/AAINetwork/AAINetwork-V1.0.2.tar.bz2
+    :type: :tbz
+
 SPEC CHECKSUMS:
+  AAILiveness: 5ab3a59d6cc70f8da3dbe314aec272adb5a6bf68
+  AAINetwork: 02c3979092230f269eeaeaa273bbaae209a6b3ac
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
   BRPickerView: 2531a2d4d0fea0b57a1c738de215af0f88863a2f
   DeviceKit: e36aaf2a0d142ef0b4fac2007649a4414af234be
@@ -88,6 +111,6 @@ SPEC CHECKSUMS:
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   TYAlertController: c121090edb0bea7426f987da94cdddd81eef4231
 
-PODFILE CHECKSUM: 3450cba6f166473a46e0cd7731e15f4fc16f4ea9
+PODFILE CHECKSUM: 25cb992b239e2c0e76cdb2d3547ae4fe87237467
 
 COCOAPODS: 1.14.3

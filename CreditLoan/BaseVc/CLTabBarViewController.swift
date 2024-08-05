@@ -33,7 +33,7 @@ extension CLTabBarViewController {
         var controllers = [UIViewController]()
         
         for (index, viewController) in viewControllers.enumerated() {
-            let navController = UINavigationController(rootViewController: viewController)
+            let navController = BaseNavController(rootViewController: viewController)
             let tabBarItem = UITabBarItem(
                 title: titles[index],
                 image: UIImage(named: images[index])?.withRenderingMode(.alwaysOriginal),

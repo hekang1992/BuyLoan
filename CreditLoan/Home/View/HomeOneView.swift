@@ -9,6 +9,8 @@ import UIKit
 
 class HomeOneView: UIView {
     
+    var applyBlock: ((religionModel) -> Void)?
+    
     var bannerModel: feminineModel?
     
     var bigCardModel: surmisesModel?
@@ -96,12 +98,16 @@ extension HomeOneView: UITableViewDelegate, UITableViewDataSource {
                 cell.model = bigCardModel?.religion
                 cell.selectionStyle = .none
                 cell.backgroundColor = .clear
+                cell.applyBlock = { [weak self] model in
+                    self?.applyBlock?(model)
+                }
                 return cell
             }
         default:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeReqCell", for: indexPath) as? HomeReqCell {
                 cell.selectionStyle = .none
                 cell.backgroundColor = .clear
+                cell.model = reqModel?.religion?[indexPath.row]
                 if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1  {
                     DispatchQueue.main.async {
                         cell.bgView.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 3.alpix())

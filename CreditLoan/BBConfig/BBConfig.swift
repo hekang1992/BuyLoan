@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 import Lottie
+import BRPickerView
 
 let Heavy_Mont = "Mont-Heavy"
 
@@ -89,6 +90,30 @@ extension UILabel {
         return label
     }
 }
+
+extension Data {
+    static func yasuoQuality(image: UIImage, maxLength: Int) -> Data? {
+        var compression: CGFloat = 0.8
+        var minCompression: CGFloat = 0.0
+        var maxCompression: CGFloat = 1.0
+        var data = image.jpegData(compressionQuality: compression)
+        if let imageData = data, imageData.count <= maxLength {
+            return imageData
+        }
+        repeat {
+            compression = (maxCompression + minCompression) / 2.0
+            data = image.jpegData(compressionQuality: compression)
+            guard let imageData = data else { break }
+            if imageData.count <= maxLength {
+                minCompression = compression
+            } else {
+                maxCompression = compression
+            }
+        } while abs(maxCompression - minCompression) > 0.01
+        return data
+    }
+}
+
 
 
 /************************************************/
@@ -198,3 +223,4 @@ class CLTabBarConfig {
     }
     
 }
+

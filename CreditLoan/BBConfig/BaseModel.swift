@@ -19,6 +19,37 @@ class CrueltyModel: BaseModel {
     var feminine: feminineModel?
     var surmises: surmisesModel?
     var lilyvi: feminineModel?
+    var benefits: benefitsModel?
+    var divine: divineModel?
+    var became: becameModel?
+    var weeks: [String]?
+    var dagged: String?
+    var faults: String?
+    var vocation: String?
+    var havin: String?
+    var providing: String?
+}
+
+class becameModel: BaseModel {
+    var reliance: [reliancemodel]?
+}
+
+class reliancemodel: BaseModel {
+    var heared: String?// pic url
+    var visitor: String?
+    var installation: String?
+    var sudden: String?//已验证，0没有验证
+    var taskType: String?
+}
+
+class divineModel: BaseModel {
+    var flesh: String?
+    var fitted: String?
+    var dagged: String?
+}
+
+class benefitsModel: BaseModel {
+    var enthusiastic: String?
 }
 
 class LoginModel: BaseModel {
@@ -66,4 +97,5 @@ class religionModel: BaseModel {
     var interfering: String?
     var trapesing: String?
     var dagged: String?
+    var religion: [religionModel]?
 }

@@ -23,6 +23,9 @@ class HomeViewController: BaseViewController {
         oneView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        oneView.applyBlock = { [weak self] model in
+            self?.applyProduct(model.relied ?? "")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +47,20 @@ extension HomeViewController {
                     self?.oneView.reqModel = model.lilyvi
                     self?.oneView.tableView.reloadData()
                 }
+            }
+            ViewHud.hideLoadView()
+        } errorBlock: { error in
+            ViewHud.hideLoadView()
+        }
+    }
+    
+    func applyProduct(_ productID: String) {
+        let dict = ["trapesing": productID]
+        ViewHud.addLoadView()
+        wangluoManager.shared.requestAPI(params: dict, pageUrl: "/cll/dearTippets", method: .post) { [weak self] successModel in
+            if let forgets = successModel.forgets, forgets == 0 || forgets == 00, let self = self {
+                let model = JSONDeserializer<CrueltyModel>.deserializeFrom(dict: successModel.cruelty)
+                JudgeConfig.judue(model?.dagged ?? "", from: self)
             }
             ViewHud.hideLoadView()
         } errorBlock: { error in

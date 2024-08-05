@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AAILivenessSDK
 import IQKeyboardManagerSwift
 
 @main
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = BaseNavController(rootViewController: launchVc)
         kkanager()
         notifactionAll()
+        AAILivenessSDK.initWith(.philippines)
         window?.makeKeyAndVisible()
         return true
     }

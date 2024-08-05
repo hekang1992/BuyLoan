@@ -10,6 +10,12 @@ import GKCycleScrollView
 
 class BBIDView: BBCommonView {
     
+    var leftBlock: (() -> Void)?
+    
+    var rightBlock: (() -> Void)?
+    
+    var startBlock: (() -> Void)?
+    
     let imageArray: [String] = ["zhengque","cuowu","wuxiao"]
     
     let titleArray: [String] = ["All information on the ID must be legible!","All information on the ID must be legible!","All information on the ID must be legible!"]
@@ -35,6 +41,7 @@ class BBIDView: BBCommonView {
         bannerView.dataSource = self
         bannerView.autoScrollTime = 2.0
         bannerView.layer.cornerRadius = 20.alpix()
+        bannerView.minimumCellAlpha = 0.0
         bannerView.pageControl = pageCon
         bannerView.reloadData()
         return bannerView
@@ -53,6 +60,8 @@ class BBIDView: BBCommonView {
         let leftView = UIView()
         leftView.backgroundColor = UIColor.init(hex: "#F2F3F5")
         leftView.layer.cornerRadius = 3.alpix()
+        leftView.layer.borderWidth = 2.alpix()
+        leftView.layer.borderColor = UIColor.init(hex: "#007CFB").cgColor
         return leftView
     }()
     
@@ -108,8 +117,8 @@ class BBIDView: BBCommonView {
     }()
     
     lazy var umidLabel: UILabel = {
-        let umidLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 16.alpix())!, textColor: UIColor.init(hex: "#B8C0C9"), textAlignment: .left)
-        umidLabel.text = "UMID"
+        let umidLabel = UILabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 16.alpix())!, textColor: UIColor.init(hex: "#007CFB"), textAlignment: .left)
+        umidLabel.text = ""
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(umidLabelClick))
         umidLabel.addGestureRecognizer(tapGesture)
         umidLabel.isUserInteractionEnabled = true
@@ -235,9 +244,24 @@ class BBIDView: BBCommonView {
             make.top.equalTo(leftView.snp.bottom).offset(128)
             make.bottom.equalToSuperview().offset(-60)
         }
+        let tapGesture = UITapGestureRecognizer()
+        leftView.addGestureRecognizer(tapGesture)
+        let ritapGesture = UITapGestureRecognizer()
+        rightView.addGestureRecognizer(ritapGesture)
+        tapGesture.rx.event
+            .bind { [weak self] _ in
+                self?.leftClick()
+            }
+            .disposed(by: disposeBag)
+        ritapGesture.rx.event.bind { [weak self] _ in
+            self?.rightClick()
+        }.disposed(by: disposeBag)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             self.startFadeImageViewAnimation()
         }
+        startBtn.rx.tap.subscribe(onNext: { [weak self] in
+            self?.startBlock?()
+        }).disposed(by: disposeBag)
     }
     
     required init?(coder: NSCoder) {
@@ -274,7 +298,15 @@ extension BBIDView: GKCycleScrollViewDataSource, GKCycleScrollViewDelegate {
     }
     
     @objc func umidLabelClick() {
-        
+        self.leftBlock?()
+    }
+    
+    func leftClick() {
+        self.leftBlock?()
+    }
+    
+    func rightClick() {
+        self.rightBlock?()
     }
     
 }

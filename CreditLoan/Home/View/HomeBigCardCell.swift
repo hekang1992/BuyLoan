@@ -7,8 +7,13 @@
 
 import UIKit
 import Kingfisher
+import RxSwift
 
 class HomeBigCardCell: UITableViewCell {
+    
+    let dispose = DisposeBag()
+    
+    var applyBlock: ((religionModel) -> Void)?
 
     lazy var bgView: UIView = {
         let bgView = UIView()
@@ -144,6 +149,11 @@ class HomeBigCardCell: UITableViewCell {
             make.height.equalTo(113.5.alpix())
             make.bottom.equalToSuperview().offset(-30.alpix())
         }
+        applyBtn.rx.tap.subscribe(onNext: { [weak self] in
+            if let self = self, let model = self.model {
+                self.applyBlock?(model)
+            }
+        }).disposed(by: dispose)
     }
     
     required init?(coder: NSCoder) {

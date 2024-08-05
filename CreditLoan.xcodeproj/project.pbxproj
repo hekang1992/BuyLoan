@@ -19,6 +19,11 @@
 		1810D8DC2C4E2B7400DA90B7 /* BBIDPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */; };
 		1810D8DE2C4E463B00DA90B7 /* BBIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */; };
 		1810D8E02C4E48E600DA90B7 /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */; };
+		18982E282C5F774A0036F819 /* PLAReqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E272C5F774A0036F819 /* PLAReqView.swift */; };
+		18982E352C6076DA0036F819 /* JdgueConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E342C6076DA0036F819 /* JdgueConfig.swift */; };
+		18982E372C60C0110036F819 /* PLAPopPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E362C60C0110036F819 /* PLAPopPhotoView.swift */; };
+		18982E392C60C2860036F819 /* PAMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E382C60C2860036F819 /* PAMediaManager.swift */; };
+		18982E3B2C60C7080036F819 /* PopSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E3A2C60C7080036F819 /* PopSuccessView.swift */; };
 		18B8140A2C5C891800ACEA1F /* HomeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B814092C5C891800ACEA1F /* HomeOneView.swift */; };
 		18B8140C2C5CD73C00ACEA1F /* HomeBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8140B2C5CD73C00ACEA1F /* HomeBannerCell.swift */; };
 		18B8140E2C5CDFC100ACEA1F /* HomeBigCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8140D2C5CDFC100ACEA1F /* HomeBigCardCell.swift */; };
@@ -57,6 +62,11 @@
 		1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBIDPopView.swift; sourceTree = "<group>"; };
 		1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBIDView.swift; sourceTree = "<group>"; };
 		1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
+		18982E272C5F774A0036F819 /* PLAReqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAReqView.swift; sourceTree = "<group>"; };
+		18982E342C6076DA0036F819 /* JdgueConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JdgueConfig.swift; sourceTree = "<group>"; };
+		18982E362C60C0110036F819 /* PLAPopPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAPopPhotoView.swift; sourceTree = "<group>"; };
+		18982E382C60C2860036F819 /* PAMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMediaManager.swift; sourceTree = "<group>"; };
+		18982E3A2C60C7080036F819 /* PopSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopSuccessView.swift; sourceTree = "<group>"; };
 		18B814092C5C891800ACEA1F /* HomeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOneView.swift; sourceTree = "<group>"; };
 		18B8140B2C5CD73C00ACEA1F /* HomeBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCell.swift; sourceTree = "<group>"; };
 		18B8140D2C5CDFC100ACEA1F /* HomeBigCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBigCardCell.swift; sourceTree = "<group>"; };
@@ -101,6 +111,7 @@
 		1810D8D42C4A6F6F00DA90B7 /* BBConfig */ = {
 			isa = PBXGroup;
 			children = (
+				18982E382C60C2860036F819 /* PAMediaManager.swift */,
 				1810D8D52C4A6F8B00DA90B7 /* Mont-Heavy.ttf */,
 				1810D8D62C4A6F8B00DA90B7 /* Mont-Regular.ttf */,
 				18EAAAF32C58DFD3000C4895 /* loading.json */,
@@ -109,6 +120,7 @@
 				18EAAAEF2C58D5B1000C4895 /* ApiUrlConfig.swift */,
 				18EAAAF52C58F4C1000C4895 /* LoginConfig.swift */,
 				1810D8D02C4A6C3200DA90B7 /* BBCommonView.swift */,
+				18982E342C6076DA0036F819 /* JdgueConfig.swift */,
 			);
 			path = BBConfig;
 			sourceTree = "<group>";
@@ -128,6 +140,7 @@
 				18B8140B2C5CD73C00ACEA1F /* HomeBannerCell.swift */,
 				18B8140D2C5CDFC100ACEA1F /* HomeBigCardCell.swift */,
 				18B8140F2C5CEC9C00ACEA1F /* HomeReqCell.swift */,
+				18982E272C5F774A0036F819 /* PLAReqView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,8 +238,10 @@
 		18EAAAE92C5775E2000C4895 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */,
 				1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */,
+				1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */,
+				18982E362C60C0110036F819 /* PLAPopPhotoView.swift */,
+				18982E3A2C60C7080036F819 /* PopSuccessView.swift */,
 				1810D8D92C4E2B5A00DA90B7 /* BBIDViewController.swift */,
 			);
 			path = Auth;
@@ -413,6 +428,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B8140C2C5CD73C00ACEA1F /* HomeBannerCell.swift in Sources */,
+				18982E372C60C0110036F819 /* PLAPopPhotoView.swift in Sources */,
+				18982E282C5F774A0036F819 /* PLAReqView.swift in Sources */,
 				18EAAAF02C58D5B1000C4895 /* ApiUrlConfig.swift in Sources */,
 				18FD72CE2C5B76580024D6A5 /* WenJuanThreeViewController.swift in Sources */,
 				18D1B9CF2C5A468200B3F313 /* PerPopView.swift in Sources */,
@@ -424,15 +441,18 @@
 				1810D8DE2C4E463B00DA90B7 /* BBIDView.swift in Sources */,
 				1810D8D12C4A6C3200DA90B7 /* BBCommonView.swift in Sources */,
 				1810D8E02C4E48E600DA90B7 /* BaseNavController.swift in Sources */,
+				18982E3B2C60C7080036F819 /* PopSuccessView.swift in Sources */,
 				1810D8D32C4A6D2B00DA90B7 /* BBLaunchView.swift in Sources */,
 				18EAAAD62C576AE1000C4895 /* BillsViewController.swift in Sources */,
 				1810D8C82C4A5E1600DA90B7 /* HomeViewController.swift in Sources */,
+				18982E352C6076DA0036F819 /* JdgueConfig.swift in Sources */,
 				18EAAAE22C5774E2000C4895 /* BaseModel.swift in Sources */,
 				18EAAAEE2C577971000C4895 /* LoginView.swift in Sources */,
 				18EAAADC2C576B4B000C4895 /* CLTabBarViewController.swift in Sources */,
 				18B814102C5CEC9C00ACEA1F /* HomeReqCell.swift in Sources */,
 				18FD72C82C5B58DF0024D6A5 /* LogOutView.swift in Sources */,
 				18EAAAE02C57741F000C4895 /* LoginViewController.swift in Sources */,
+				18982E392C60C2860036F819 /* PAMediaManager.swift in Sources */,
 				18FD72CC2C5B764D0024D6A5 /* WenJuanTwoViewController.swift in Sources */,
 				18B8140E2C5CDFC100ACEA1F /* HomeBigCardCell.swift in Sources */,
 				18EAAADE2C576F6F000C4895 /* CLNavigationViewController.swift in Sources */,

@@ -34,9 +34,9 @@ class LoginConfig: NSObject {
         let befell = CLDeviceInfo.usingProxy()
         let nullified: String = "iOS"
         let overturned: String = UIDevice.current.systemVersion
-        var baffled: String = ""
+        var declamation: String = ""
         if let sessionId: String = UserDefaults.standard.object(forKey: CL_SESSIONID) as? String {
-            baffled = sessionId
+            declamation = sessionId
         }
         let observation: String = "cll"
         let fundamental: String = CLDeviceInfo.getIDFV() ?? ""
@@ -53,7 +53,7 @@ class LoginConfig: NSObject {
                      "objectionable": objectionable,
                      "zeeker": "001"]
         
-        let dict2 = ["baffled": baffled,
+        let dict2 = ["declamation": declamation,
                      "fundamental": fundamental,
                      "egg": "1",
                      "overturned": overturned,
