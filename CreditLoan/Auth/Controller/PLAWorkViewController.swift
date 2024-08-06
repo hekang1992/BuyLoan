@@ -19,7 +19,7 @@ class PLAWorkViewController: BaseViewController {
     lazy var personView: PLAPersonalView = {
         let personView = PLAPersonalView()
         personView.scrollView.isHidden = true
-        personView.nameLabel.text = "Fill out personal information"
+        personView.nameLabel.text = "Enter Work Information"
         return personView
     }()
     
