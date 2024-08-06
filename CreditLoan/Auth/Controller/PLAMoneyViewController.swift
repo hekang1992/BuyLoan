@@ -1,24 +1,20 @@
 //
-//  BaseViewController.swift
+//  PLAMoneyViewController.swift
 //  CreditLoan
 //
-//  Created by apple on 2024/7/19.
+//  Created by apple on 2024/8/6.
 //
 
 import UIKit
-import RxSwift
 
-class BaseViewController: UIViewController {
+class PLAMoneyViewController: BaseViewController {
+
+    var productID: String?
     
-    lazy var disposeBag = {
-        return DisposeBag()
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = .white
     }
     
 

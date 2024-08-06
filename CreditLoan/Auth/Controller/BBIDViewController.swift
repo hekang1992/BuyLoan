@@ -66,11 +66,15 @@ class BBIDViewController: BaseViewController {
                 MBProgressHUD.wj_showPlainText("Please select your type of identification document", view: nil)
             }else {
                 if self?.model?.divine?.flesh == "1" {
-                    self?.renlianixnxi()
+                    let dagged = self?.model?.dagged ?? ""
+                    if !dagged.isEmpty {
+                        JudgeConfig.productDetailInfo(self?.productID ?? "", form: self!)
+                    }else {
+                        self?.renlianixnxi()
+                    }
                 }else {
                     self?.popPhoView()
                 }
-                
             }
         }
         faceInfo()
@@ -103,13 +107,17 @@ extension BBIDViewController: UIImagePickerControllerDelegate, UINavigationContr
                 let model = JSONDeserializer<CrueltyModel>.deserializeFrom(dict: successModel.cruelty)
                 guard let model = model else { return }
                 self.model = model
+                let dagged = model.dagged ?? ""
                 let flesh = model.divine?.flesh ?? ""
                 self.weakStringArray = model.weeks ?? [""]
                 if flesh == "1" {
+                    if !dagged.isEmpty {
+                        self.idView.iconTe.kf.setImage(with: URL(string: dagged), placeholder: UIImage(named: "Mask_group"))
+                    }
                     self.idView.leftView.isUserInteractionEnabled = false
                     self.idView.umidLabel.isUserInteractionEnabled = false
                     self.idView.umidLabel.text = model.divine?.fitted
-                    self.idView.icon.kf.setImage(with: URL(string: model.divine?.dagged ?? ""))
+                    self.idView.icon.kf.setImage(with: URL(string: model.divine?.dagged ?? ""), placeholder: UIImage(named: "common"))
                     self.idView.rightView.layer.borderWidth = 2.alpix()
                     self.idView.rightView.layer.borderColor = UIColor.init(hex: "#007CFB").cgColor
                 }
@@ -287,11 +295,11 @@ extension BBIDViewController: UIImagePickerControllerDelegate, UINavigationContr
     
     func saveFaceInfo(_ data: Data, _ associated: String, _ vc: AAILivenessViewController) {
         ViewHud.addLoadView()
-        wangluoManager.shared.uploadAPI(params: ["parenthetic": "2", "trapesing": productID ?? "", "acerbities": "10", "associated": associated, "risen": "2"], pageUrl: "/cll/proudDisturb", method: .post, data: data, complete: { successModel in
+        wangluoManager.shared.uploadAPI(params: ["parenthetic": "2", "trapesing": productID ?? "", "acerbities": "10", "associated": associated, "risen": "2"], pageUrl: "/cll/proudDisturb", method: .post, data: data, complete: { [weak self] successModel in
             if let forgets = successModel.forgets, forgets == 0 || forgets == 00 {
                 UIView.animate(withDuration: 0.25) {
                     vc.navigationController?.dismiss(animated: true, completion: {
-                        
+                        self?.faceInfo()
                     })
                 }
             }

@@ -13,7 +13,7 @@ let apiHost = "http://8.220.137.160:9023"
 
 let schemeUrl = "cll://we.win"
 
-typealias CompleteBlock = (_ successModel: CrueltyModel) -> Void
+typealias CompleteBlock = (_ successModel: BaseModel) -> Void
 
 typealias NSErrorBlock = (_ error: Any) -> Void
 
@@ -42,7 +42,7 @@ extension wangluoManager {
                 case .success(_):
                     if response.data != nil {
                         let jsonStr = NSString(data:response.data! ,encoding: String.Encoding.utf8.rawValue)
-                        if let model = JSONDeserializer<CrueltyModel>.deserializeFrom(json: jsonStr as String?) {
+                        if let model = JSONDeserializer<BaseModel>.deserializeFrom(json: jsonStr as String?) {
                             if model.forgets == -2 {
                                 complete(model)
                             }else {
@@ -87,7 +87,7 @@ extension wangluoManager {
                 case .success(_):
                     if response.data != nil {
                         let jsonStr = NSString(data:response.data! ,encoding: String.Encoding.utf8.rawValue)
-                        if let model = JSONDeserializer<CrueltyModel>.deserializeFrom(json: jsonStr as String?) {
+                        if let model = JSONDeserializer<BaseModel>.deserializeFrom(json: jsonStr as String?) {
                             if model.forgets == -2 {
                                 complete(model)
                             }else {

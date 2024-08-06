@@ -24,6 +24,13 @@
 		18982E372C60C0110036F819 /* PLAPopPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E362C60C0110036F819 /* PLAPopPhotoView.swift */; };
 		18982E392C60C2860036F819 /* PAMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E382C60C2860036F819 /* PAMediaManager.swift */; };
 		18982E3B2C60C7080036F819 /* PopSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E3A2C60C7080036F819 /* PopSuccessView.swift */; };
+		18982E4F2C61F0DB0036F819 /* PLAPersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E4E2C61F0DB0036F819 /* PLAPersonalViewController.swift */; };
+		18982E532C61F3660036F819 /* PLAPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E522C61F3660036F819 /* PLAPersonalView.swift */; };
+		18982E552C61F5940036F819 /* PLAInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E542C61F5940036F819 /* PLAInputCell.swift */; };
+		18982E572C61F5A30036F819 /* PLASelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E562C61F5A30036F819 /* PLASelectCell.swift */; };
+		18982E592C6218930036F819 /* PLAWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E582C6218930036F819 /* PLAWorkViewController.swift */; };
+		18982E5B2C6221840036F819 /* PLAPhoneConViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E5A2C6221840036F819 /* PLAPhoneConViewController.swift */; };
+		18982E5D2C6221920036F819 /* PLAMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E5C2C6221920036F819 /* PLAMoneyViewController.swift */; };
 		18B8140A2C5C891800ACEA1F /* HomeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B814092C5C891800ACEA1F /* HomeOneView.swift */; };
 		18B8140C2C5CD73C00ACEA1F /* HomeBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8140B2C5CD73C00ACEA1F /* HomeBannerCell.swift */; };
 		18B8140E2C5CDFC100ACEA1F /* HomeBigCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8140D2C5CDFC100ACEA1F /* HomeBigCardCell.swift */; };
@@ -67,6 +74,13 @@
 		18982E362C60C0110036F819 /* PLAPopPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAPopPhotoView.swift; sourceTree = "<group>"; };
 		18982E382C60C2860036F819 /* PAMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAMediaManager.swift; sourceTree = "<group>"; };
 		18982E3A2C60C7080036F819 /* PopSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopSuccessView.swift; sourceTree = "<group>"; };
+		18982E4E2C61F0DB0036F819 /* PLAPersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAPersonalViewController.swift; sourceTree = "<group>"; };
+		18982E522C61F3660036F819 /* PLAPersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAPersonalView.swift; sourceTree = "<group>"; };
+		18982E542C61F5940036F819 /* PLAInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAInputCell.swift; sourceTree = "<group>"; };
+		18982E562C61F5A30036F819 /* PLASelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLASelectCell.swift; sourceTree = "<group>"; };
+		18982E582C6218930036F819 /* PLAWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAWorkViewController.swift; sourceTree = "<group>"; };
+		18982E5A2C6221840036F819 /* PLAPhoneConViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAPhoneConViewController.swift; sourceTree = "<group>"; };
+		18982E5C2C6221920036F819 /* PLAMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAMoneyViewController.swift; sourceTree = "<group>"; };
 		18B814092C5C891800ACEA1F /* HomeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOneView.swift; sourceTree = "<group>"; };
 		18B8140B2C5CD73C00ACEA1F /* HomeBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCell.swift; sourceTree = "<group>"; };
 		18B8140D2C5CDFC100ACEA1F /* HomeBigCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBigCardCell.swift; sourceTree = "<group>"; };
@@ -123,6 +137,48 @@
 				18982E342C6076DA0036F819 /* JdgueConfig.swift */,
 			);
 			path = BBConfig;
+			sourceTree = "<group>";
+		};
+		18982E4C2C61F0AC0036F819 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1810D8D92C4E2B5A00DA90B7 /* BBIDViewController.swift */,
+				18982E4E2C61F0DB0036F819 /* PLAPersonalViewController.swift */,
+				18982E582C6218930036F819 /* PLAWorkViewController.swift */,
+				18982E5A2C6221840036F819 /* PLAPhoneConViewController.swift */,
+				18982E5C2C6221920036F819 /* PLAMoneyViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18982E4D2C61F0B40036F819 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18982E512C61F34F0036F819 /* AView */,
+				18982E502C61F34C0036F819 /* BView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18982E502C61F34C0036F819 /* BView */ = {
+			isa = PBXGroup;
+			children = (
+				18982E542C61F5940036F819 /* PLAInputCell.swift */,
+				18982E562C61F5A30036F819 /* PLASelectCell.swift */,
+				18982E522C61F3660036F819 /* PLAPersonalView.swift */,
+			);
+			path = BView;
+			sourceTree = "<group>";
+		};
+		18982E512C61F34F0036F819 /* AView */ = {
+			isa = PBXGroup;
+			children = (
+				1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */,
+				1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */,
+				18982E362C60C0110036F819 /* PLAPopPhotoView.swift */,
+				18982E3A2C60C7080036F819 /* PopSuccessView.swift */,
+			);
+			path = AView;
 			sourceTree = "<group>";
 		};
 		18B814072C5C88F000ACEA1F /* Controller */ = {
@@ -238,11 +294,8 @@
 		18EAAAE92C5775E2000C4895 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */,
-				1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */,
-				18982E362C60C0110036F819 /* PLAPopPhotoView.swift */,
-				18982E3A2C60C7080036F819 /* PopSuccessView.swift */,
-				1810D8D92C4E2B5A00DA90B7 /* BBIDViewController.swift */,
+				18982E4D2C61F0B40036F819 /* View */,
+				18982E4C2C61F0AC0036F819 /* Controller */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -435,6 +488,7 @@
 				18D1B9CF2C5A468200B3F313 /* PerPopView.swift in Sources */,
 				1810D8CC2C4A6B5800DA90B7 /* BBConfig.swift in Sources */,
 				1810D8DC2C4E2B7400DA90B7 /* BBIDPopView.swift in Sources */,
+				18982E5B2C6221840036F819 /* PLAPhoneConViewController.swift in Sources */,
 				18C426EB2C4A569D00A735A6 /* AppDelegate.swift in Sources */,
 				1810D8C62C4A5DBE00DA90B7 /* BaseViewController.swift in Sources */,
 				1810D8DA2C4E2B5A00DA90B7 /* BBIDViewController.swift in Sources */,
@@ -445,14 +499,20 @@
 				1810D8D32C4A6D2B00DA90B7 /* BBLaunchView.swift in Sources */,
 				18EAAAD62C576AE1000C4895 /* BillsViewController.swift in Sources */,
 				1810D8C82C4A5E1600DA90B7 /* HomeViewController.swift in Sources */,
+				18982E5D2C6221920036F819 /* PLAMoneyViewController.swift in Sources */,
 				18982E352C6076DA0036F819 /* JdgueConfig.swift in Sources */,
+				18982E572C61F5A30036F819 /* PLASelectCell.swift in Sources */,
 				18EAAAE22C5774E2000C4895 /* BaseModel.swift in Sources */,
 				18EAAAEE2C577971000C4895 /* LoginView.swift in Sources */,
 				18EAAADC2C576B4B000C4895 /* CLTabBarViewController.swift in Sources */,
 				18B814102C5CEC9C00ACEA1F /* HomeReqCell.swift in Sources */,
+				18982E4F2C61F0DB0036F819 /* PLAPersonalViewController.swift in Sources */,
+				18982E532C61F3660036F819 /* PLAPersonalView.swift in Sources */,
+				18982E592C6218930036F819 /* PLAWorkViewController.swift in Sources */,
 				18FD72C82C5B58DF0024D6A5 /* LogOutView.swift in Sources */,
 				18EAAAE02C57741F000C4895 /* LoginViewController.swift in Sources */,
 				18982E392C60C2860036F819 /* PAMediaManager.swift in Sources */,
+				18982E552C61F5940036F819 /* PLAInputCell.swift in Sources */,
 				18FD72CC2C5B764D0024D6A5 /* WenJuanTwoViewController.swift in Sources */,
 				18B8140E2C5CDFC100ACEA1F /* HomeBigCardCell.swift in Sources */,
 				18EAAADE2C576F6F000C4895 /* CLNavigationViewController.swift in Sources */,

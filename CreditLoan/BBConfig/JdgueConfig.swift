@@ -54,12 +54,28 @@ class JudgeConfig: NSObject {
             vc.navigationController?.pushViewController(idVc, animated: true)
             break
         case "kpp2":
+            let perVc = PLAPersonalViewController()
+            perVc.productID = productID
+            perVc.hidesBottomBarWhenPushed = true
+            vc.navigationController?.pushViewController(perVc, animated: true)
             break
         case "kpp3":
+            let eorkVc = PLAWorkViewController()
+            eorkVc.productID = productID
+            eorkVc.hidesBottomBarWhenPushed = true
+            vc.navigationController?.pushViewController(eorkVc, animated: true)
             break
         case "kpp4":
+            let eorkVc = PLAPhoneConViewController()
+            eorkVc.productID = productID
+            eorkVc.hidesBottomBarWhenPushed = true
+            vc.navigationController?.pushViewController(eorkVc, animated: true)
             break
         case "kpp5":
+            let eorkVc = PLAMoneyViewController()
+            eorkVc.productID = productID
+            eorkVc.hidesBottomBarWhenPushed = true
+            vc.navigationController?.pushViewController(eorkVc, animated: true)
             break
         case "kpp6":
             break
