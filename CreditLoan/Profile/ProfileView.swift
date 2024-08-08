@@ -30,11 +30,11 @@ class ProfileView: UIView {
         return scrollView
     }()
     
-    lazy var iconImageView: UIButton = {
-        let iconImageView = UIButton(type: .custom)
-        iconImageView.adjustsImageWhenDisabled = false
-        iconImageView.setBackgroundImage(UIImage(named: "Group_1206"), for: .normal)
-        return iconImageView
+    lazy var iconbtn: UIButton = {
+        let iconbtn = UIButton(type: .custom)
+        iconbtn.adjustsImageWhenHighlighted = false
+        iconbtn.setBackgroundImage(UIImage(named: "Group_1206"), for: .normal)
+        return iconbtn
     }()
     
     lazy var iconImageView1: UIImageView = {
@@ -110,8 +110,8 @@ class ProfileView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(scrollView)
-        scrollView.addSubview(iconImageView)
-        iconImageView.addSubview(iconImageView1)
+        scrollView.addSubview(iconbtn)
+        iconbtn.addSubview(iconImageView1)
         scrollView.addSubview(phoneLabel)
         scrollView.addSubview(welLabel)
         scrollView.addSubview(orderBtn)
@@ -125,7 +125,7 @@ class ProfileView: UIView {
         scrollView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        iconImageView.snp.makeConstraints { make in
+        iconbtn.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(60.alpix())
             make.left.equalToSuperview().offset(20.alpix())
             make.size.equalTo(CGSize(width: 100.alpix(), height: 100.alpix()))
@@ -136,20 +136,20 @@ class ProfileView: UIView {
             make.size.equalTo(CGSize(width: 29.alpix(), height: 29.alpix()))
         }
         phoneLabel.snp.makeConstraints { make in
-            make.top.equalTo(iconImageView.snp.top).offset(12.alpix())
-            make.left.equalTo(iconImageView.snp.right).offset(30.alpix())
+            make.top.equalTo(iconbtn.snp.top).offset(12.alpix())
+            make.left.equalTo(iconbtn.snp.right).offset(30.alpix())
             make.height.equalTo(32.5.alpix())
         }
         welLabel.snp.makeConstraints { make in
             make.top.equalTo(phoneLabel.snp.bottom).offset(6.alpix())
-            make.left.equalTo(iconImageView.snp.right).offset(30.alpix())
+            make.left.equalTo(iconbtn.snp.right).offset(30.alpix())
             make.width.equalTo(205.alpix())
         }
         orderBtn.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.left.equalToSuperview().offset(20.alpix())
             make.height.equalTo(60.alpix())
-            make.top.equalTo(iconImageView.snp.bottom).offset(30.alpix())
+            make.top.equalTo(iconbtn.snp.bottom).offset(30.alpix())
         }
         orderBtn1.snp.makeConstraints { make in
             make.top.equalTo(orderBtn.snp.bottom).offset(20.alpix())
@@ -188,7 +188,7 @@ class ProfileView: UIView {
             make.bottom.equalToSuperview()
         }
         
-        iconImageView.rx.tap.subscribe(onNext: { [weak self] in
+        iconbtn.rx.tap.subscribe(onNext: { [weak self] in
             self?.block1?()
         }).disposed(by: disp)
         orderBtn.rx.tap.subscribe(onNext: { [weak self] in

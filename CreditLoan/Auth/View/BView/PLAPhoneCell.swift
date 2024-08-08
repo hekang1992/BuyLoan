@@ -33,20 +33,20 @@ class PLAPhoneCell: UITableViewCell {
         btn1.contentHorizontalAlignment = .left
         btn1.titleEdgeInsets = UIEdgeInsets(top: 0, left: 30.alpix(), bottom: 0, right: 0)
         btn1.titleLabel?.font = UIFont(name: Heavy_Mont, size: 18.alpix())
-        btn1.setTitleColor(UIColor.init(hex: "#2C2C36"), for: .normal)
+        btn1.setTitleColor(UIColor.init(hex: "#B8C0C9"), for: .normal)
         btn1.setTitle("Relationship", for: .normal)
         return btn1
     }()
     
     lazy var nameLabel: PaddedLabel = {
-        let nameLabel = PaddedLabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 18.alpix())!, textColor: UIColor.init(hex: "#2C2C36"), textAlignment: .left)
+        let nameLabel = PaddedLabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 18.alpix())!, textColor: UIColor.init(hex: "#B8C0C9"), textAlignment: .left)
         nameLabel.text = "Name"
         nameLabel.textInsets = UIEdgeInsets(top: 0, left: 30.alpix(), bottom: 0, right: 0)
         return nameLabel
     }()
     
     lazy var pLabel: PaddedLabel = {
-        let pLabel = PaddedLabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 14.alpix())!, textColor: UIColor.init(hex: "#2C2C36"), textAlignment: .left)
+        let pLabel = PaddedLabel.chuangjianLabel(font: UIFont(name: Heavy_Mont, size: 14.alpix())!, textColor: UIColor.init(hex: "#B8C0C9"), textAlignment: .left)
         pLabel.text = "+63 123 456 7890"
         pLabel.textInsets = UIEdgeInsets(top: 0, left: 30.alpix(), bottom: 0, right: 0)
         return pLabel
