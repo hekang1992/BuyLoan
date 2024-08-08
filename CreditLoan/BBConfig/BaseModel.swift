@@ -31,6 +31,14 @@ class CrueltyModel: HandyJSON {
     var providing: String?
     var visiting: [visitingModel]?
     var reliance: [reliancemodel]?
+    var smilingly: smilinglyModel?
+}
+
+class smilinglyModel: HandyJSON {
+    required init() {}
+    var brightened: String?
+    var installation: String?
+    var reliance: [reliancemodel]?
 }
 
 class visitingModel: HandyJSON {
@@ -68,6 +76,18 @@ class reliancemodel: HandyJSON {
     var relied: String?
     var faults: String?
     var reliance: [reliancemodel]?
+    
+    var brightened: String?
+    var mobile_name: String?
+    var endeavoured: String?
+    
+    var nourishing : nourishingModel?
+}
+
+class nourishingModel: HandyJSON {
+    required init() {}
+    var faults: String?
+    var acerbities: String?
 }
 
 class divineModel: HandyJSON {

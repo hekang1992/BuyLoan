@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import HandyJSON
 
 class PLAPhoneConViewController: BaseViewController {
 
     var productID: String?
     
-    lazy var phoneView: PLAPersonalView = {
-        let phoneView = PLAPersonalView()
+    lazy var phoneView: PLAPhoneView = {
+        let phoneView = PLAPhoneView()
         phoneView.scrollView.isHidden = true
         phoneView.nameLabel.text = "Emergency Contact"
         return phoneView
@@ -29,6 +30,27 @@ class PLAPhoneConViewController: BaseViewController {
         phoneView.backBlock = { [weak self] in
             self?.navigationController?.popToRootViewController(animated: true)
         }
+        phoneInfo()
     }
 
+}
+
+extension PLAPhoneConViewController {
+    
+    func phoneInfo() {
+        ViewHud.addLoadView()
+        wangluoManager.shared.requestAPI(params: ["trapesing": productID ?? "", "yovely": "2"], pageUrl: "/cll/experiencePsalm", method: .post) { [weak self] successModel in
+            ViewHud.hideLoadView()
+            if let forgets = successModel.forgets, forgets == 0 || forgets == 00 {
+                guard let model = JSONDeserializer<CrueltyModel>.deserializeFrom(dict: successModel.cruelty) else { return }
+                let modelArray = model.smilingly?.reliance
+                self?.phoneView.modelArray = modelArray
+                self?.phoneView.tableView.reloadData()
+            }
+        } errorBlock: { error in
+            ViewHud.hideLoadView()
+        }
+
+    }
+    
 }

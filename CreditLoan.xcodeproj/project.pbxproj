@@ -20,6 +20,7 @@
 		1810D8DE2C4E463B00DA90B7 /* BBIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */; };
 		1810D8E02C4E48E600DA90B7 /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */; };
 		1820A49E2C64A6BC0086D4AC /* BillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820A49D2C64A6BC0086D4AC /* BillsView.swift */; };
+		1820A4A22C64AC3E0086D4AC /* PLAPhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820A4A12C64AC3E0086D4AC /* PLAPhoneCell.swift */; };
 		18982E282C5F774A0036F819 /* PLAReqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E272C5F774A0036F819 /* PLAReqView.swift */; };
 		18982E352C6076DA0036F819 /* JdgueConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E342C6076DA0036F819 /* JdgueConfig.swift */; };
 		18982E372C60C0110036F819 /* PLAPopPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E362C60C0110036F819 /* PLAPopPhotoView.swift */; };
@@ -73,6 +74,7 @@
 		1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBIDView.swift; sourceTree = "<group>"; };
 		1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
 		1820A49D2C64A6BC0086D4AC /* BillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsView.swift; sourceTree = "<group>"; };
+		1820A4A12C64AC3E0086D4AC /* PLAPhoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAPhoneCell.swift; sourceTree = "<group>"; };
 		18982E272C5F774A0036F819 /* PLAReqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAReqView.swift; sourceTree = "<group>"; };
 		18982E342C6076DA0036F819 /* JdgueConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JdgueConfig.swift; sourceTree = "<group>"; };
 		18982E362C60C0110036F819 /* PLAPopPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAPopPhotoView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				18982E562C61F5A30036F819 /* PLASelectCell.swift */,
 				18982E522C61F3660036F819 /* PLAPersonalView.swift */,
 				18982E7E2C622E770036F819 /* PLAPhoneView.swift */,
+				1820A4A12C64AC3E0086D4AC /* PLAPhoneCell.swift */,
 			);
 			path = BView;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				18982E392C60C2860036F819 /* PAMediaManager.swift in Sources */,
 				18982E552C61F5940036F819 /* PLAInputCell.swift in Sources */,
 				18FD72CC2C5B764D0024D6A5 /* WenJuanTwoViewController.swift in Sources */,
+				1820A4A22C64AC3E0086D4AC /* PLAPhoneCell.swift in Sources */,
 				18B8140E2C5CDFC100ACEA1F /* HomeBigCardCell.swift in Sources */,
 				18EAAADE2C576F6F000C4895 /* CLNavigationViewController.swift in Sources */,
 				18EAAADA2C576B11000C4895 /* GeRenViewController.swift in Sources */,

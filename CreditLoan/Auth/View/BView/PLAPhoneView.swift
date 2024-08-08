@@ -9,10 +9,8 @@ import UIKit
 import BRPickerView
 
 class PLAPhoneView: BBCommonView {
-
-    var dizhiBlock: ((UITextField, visitingModel) -> Void)?
     
-    var modelArray: [visitingModel]?
+    var modelArray: [reliancemodel]?
     
     var saveInfoBlock: (() -> Void)?
     
@@ -45,8 +43,7 @@ class PLAPhoneView: BBCommonView {
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         tableView.contentInsetAdjustmentBehavior = .never
-        tableView.register(PLAInputCell.self, forCellReuseIdentifier: "PLAInputCell")
-        tableView.register(PLASelectCell.self, forCellReuseIdentifier: "PLASelectCell")
+        tableView.register(PLAPhoneCell.self, forCellReuseIdentifier: "PLAPhoneCell")
         return tableView
     }()
     
@@ -100,7 +97,6 @@ extension PLAPhoneView: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return nil
     }
@@ -114,35 +110,11 @@ extension PLAPhoneView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let modelArray = modelArray else { return UITableViewCell() }
-        let model = modelArray[indexPath.row] as visitingModel
-        if model.indefatigable == "wqq2" {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PLAInputCell", for: indexPath) as? PLAInputCell {
-                cell.backgroundColor = .clear
-                cell.selectionStyle = .none
-                cell.model = model
-                return cell
-            }
-        }else if model.indefatigable == "wqq1" || model.indefatigable == "wqq3" {
-            let forgets = model.forgets ?? ""
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "PLASelectCell", for: indexPath) as? PLASelectCell {
-                cell.backgroundColor = .clear
-                cell.selectionStyle = .none
-                cell.model = model
-                cell.block = { [weak self] inputField in
-                    if forgets == "contemplation" || forgets == "indian" {
-                        self?.dizhiBlock?(inputField, model)
-                    }else if forgets == "character" {
-                        self?.popOneView(textField: inputField, model: model)
-                    }else {
-                        self?.popOneView(textField: inputField, model: model)
-                    }
-                    
-                }
-                return cell
-            }
-        }else {}
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PLAPhoneCell", for: indexPath) as? PLAPhoneCell
+        cell?.backgroundColor = .clear
+        cell?.selectionStyle = .none
+        cell?.model = modelArray?[indexPath.row]
+        return cell ?? UITableViewCell()
     }
     
     func popOneView(textField: UITextField, model: visitingModel) {
@@ -186,5 +158,5 @@ extension PLAPhoneView: UITableViewDelegate, UITableViewDataSource {
         stringPickerView.pickerStyle = customStyle
         stringPickerView.show()
     }
-
+    
 }
