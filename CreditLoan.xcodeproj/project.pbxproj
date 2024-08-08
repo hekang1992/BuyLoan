@@ -19,6 +19,7 @@
 		1810D8DC2C4E2B7400DA90B7 /* BBIDPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */; };
 		1810D8DE2C4E463B00DA90B7 /* BBIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */; };
 		1810D8E02C4E48E600DA90B7 /* BaseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */; };
+		1820A49E2C64A6BC0086D4AC /* BillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820A49D2C64A6BC0086D4AC /* BillsView.swift */; };
 		18982E282C5F774A0036F819 /* PLAReqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E272C5F774A0036F819 /* PLAReqView.swift */; };
 		18982E352C6076DA0036F819 /* JdgueConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E342C6076DA0036F819 /* JdgueConfig.swift */; };
 		18982E372C60C0110036F819 /* PLAPopPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E362C60C0110036F819 /* PLAPopPhotoView.swift */; };
@@ -32,6 +33,7 @@
 		18982E5B2C6221840036F819 /* PLAPhoneConViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E5A2C6221840036F819 /* PLAPhoneConViewController.swift */; };
 		18982E5D2C6221920036F819 /* PLAMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E5C2C6221920036F819 /* PLAMoneyViewController.swift */; };
 		18982E7F2C622E770036F819 /* PLAPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18982E7E2C622E770036F819 /* PLAPhoneView.swift */; };
+		18AFE2C92C635A20000F9F23 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFE2C82C635A20000F9F23 /* ProfileView.swift */; };
 		18B8140A2C5C891800ACEA1F /* HomeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B814092C5C891800ACEA1F /* HomeOneView.swift */; };
 		18B8140C2C5CD73C00ACEA1F /* HomeBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8140B2C5CD73C00ACEA1F /* HomeBannerCell.swift */; };
 		18B8140E2C5CDFC100ACEA1F /* HomeBigCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8140D2C5CDFC100ACEA1F /* HomeBigCardCell.swift */; };
@@ -70,6 +72,7 @@
 		1810D8DB2C4E2B7400DA90B7 /* BBIDPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBIDPopView.swift; sourceTree = "<group>"; };
 		1810D8DD2C4E463B00DA90B7 /* BBIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBIDView.swift; sourceTree = "<group>"; };
 		1810D8DF2C4E48E600DA90B7 /* BaseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavController.swift; sourceTree = "<group>"; };
+		1820A49D2C64A6BC0086D4AC /* BillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsView.swift; sourceTree = "<group>"; };
 		18982E272C5F774A0036F819 /* PLAReqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAReqView.swift; sourceTree = "<group>"; };
 		18982E342C6076DA0036F819 /* JdgueConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JdgueConfig.swift; sourceTree = "<group>"; };
 		18982E362C60C0110036F819 /* PLAPopPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAPopPhotoView.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		18982E5A2C6221840036F819 /* PLAPhoneConViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAPhoneConViewController.swift; sourceTree = "<group>"; };
 		18982E5C2C6221920036F819 /* PLAMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAMoneyViewController.swift; sourceTree = "<group>"; };
 		18982E7E2C622E770036F819 /* PLAPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLAPhoneView.swift; sourceTree = "<group>"; };
+		18AFE2C82C635A20000F9F23 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		18B814092C5C891800ACEA1F /* HomeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOneView.swift; sourceTree = "<group>"; };
 		18B8140B2C5CD73C00ACEA1F /* HomeBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCell.swift; sourceTree = "<group>"; };
 		18B8140D2C5CDFC100ACEA1F /* HomeBigCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBigCardCell.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 		18EAAAE72C5775CC000C4895 /* Bills */ = {
 			isa = PBXGroup;
 			children = (
+				1820A49D2C64A6BC0086D4AC /* BillsView.swift */,
 				18EAAAD52C576AE1000C4895 /* BillsViewController.swift */,
 			);
 			path = Bills;
@@ -289,6 +294,7 @@
 		18EAAAE82C5775D3000C4895 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				18AFE2C82C635A20000F9F23 /* ProfileView.swift */,
 				18EAAAD92C576B11000C4895 /* GeRenViewController.swift */,
 			);
 			path = Profile;
@@ -494,8 +500,10 @@
 				18982E5B2C6221840036F819 /* PLAPhoneConViewController.swift in Sources */,
 				18C426EB2C4A569D00A735A6 /* AppDelegate.swift in Sources */,
 				1810D8C62C4A5DBE00DA90B7 /* BaseViewController.swift in Sources */,
+				1820A49E2C64A6BC0086D4AC /* BillsView.swift in Sources */,
 				1810D8DA2C4E2B5A00DA90B7 /* BBIDViewController.swift in Sources */,
 				1810D8DE2C4E463B00DA90B7 /* BBIDView.swift in Sources */,
+				18AFE2C92C635A20000F9F23 /* ProfileView.swift in Sources */,
 				1810D8D12C4A6C3200DA90B7 /* BBCommonView.swift in Sources */,
 				1810D8E02C4E48E600DA90B7 /* BaseNavController.swift in Sources */,
 				18982E3B2C60C7080036F819 /* PopSuccessView.swift in Sources */,

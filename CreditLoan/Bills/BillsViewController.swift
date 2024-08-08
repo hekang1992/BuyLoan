@@ -6,14 +6,38 @@
 //
 
 import UIKit
+import MBProgressHUD_WJExtension
 
 class BillsViewController: BaseViewController {
+    
+    lazy var billsView: BillsView = {
+        let billsView = BillsView()
+        return billsView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = .purple
+        view.addSubview(billsView)
+        billsView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        billsView.block1 = { [weak self] in
+            MBProgressHUD.wj_showPlainText("1", view: nil)
+        }
+        billsView.block2 = { [weak self] in
+            MBProgressHUD.wj_showPlainText("2", view: nil)
+        }
+        billsView.block3 = { [weak self] in
+            MBProgressHUD.wj_showPlainText("3", view: nil)
+        }
+        billsView.block4 = { [weak self] in
+            MBProgressHUD.wj_showPlainText("4", view: nil)
+        }
+        billsView.block5 = { [weak self] in
+            MBProgressHUD.wj_showPlainText("5", view: nil)
+        }
     }
     
 
