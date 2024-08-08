@@ -7,6 +7,7 @@
 
 import UIKit
 import BRPickerView
+import MBProgressHUD_WJExtension
 
 class PLAPhoneView: BBCommonView {
     
@@ -114,6 +115,12 @@ extension PLAPhoneView: UITableViewDelegate, UITableViewDataSource {
         cell?.backgroundColor = .clear
         cell?.selectionStyle = .none
         cell?.model = modelArray?[indexPath.row]
+        cell?.block1 = { [weak self] btn in
+            MBProgressHUD.wj_showPlainText("1", view: nil)
+        }
+        cell?.block2 = { [weak self] btn in
+            MBProgressHUD.wj_showPlainText("2", view: nil)
+        }
         return cell ?? UITableViewCell()
     }
     
